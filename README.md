@@ -2,7 +2,7 @@
 
 # Git en equipo: trabajo colaborativo desde la terminal
 
-Sesión 2 del curso de Git · 4 horas. Desde aquí llegas a todo lo que necesitas: qué instalar antes de la clase, la guía que seguirás durante la sesión, el material, la tarea y los recursos para repasar por tu cuenta.
+Sesión 2 del curso de Git · ~12 horas de clase, en varias jornadas. Desde aquí llegas a todo lo que necesitas: qué instalar antes de la clase, la guía que seguirás durante la sesión, el material, la tarea y los recursos para repasar por tu cuenta.
 
 <br>
 
@@ -50,7 +50,7 @@ Al terminar vas a poder:
 
 | Término | Qué es |
 |---|---|
-| **Sesión** | Una clase completa de 4 horas. Este repositorio cubre la Sesión 2 |
+| **Sesión** | Una unidad del curso con su propio tema; puede ocupar varias clases. Este repositorio cubre la Sesión 2 (~12 horas de clase) |
 | **Bloque** | Cada parte de la sesión donde se explica y practica un concepto principal. La sesión tiene 8 |
 | **Guion** | El material guía del instructor |
 | **Guía del alumno** | Lo que tú sigues durante la sesión, bloque por bloque |

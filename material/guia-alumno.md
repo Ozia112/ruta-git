@@ -2,7 +2,7 @@
 
 # Guía del alumno: Git en equipo desde la terminal
 
-Sesión 2 del curso de Git · 4 horas
+Sesión 2 del curso de Git · ~12 horas de clase, en varias jornadas
 
 <br>
 
@@ -32,7 +32,6 @@ Esta guía te acompaña durante toda la sesión: dice qué se hace en cada bloqu
 | 2 | Local y origin: el líder publica, el equipo clona | Equipos |
 | 3 | Tu primer issue | Individual, en el repo del equipo |
 | 4 | El ritual diario y tu primer Pull Request | Individual, en el repo del equipo |
-| ☕ | Descanso (10 min) | |
 | 5 | Las reglas de la casa | Líder en GitHub.com, el equipo observa |
 | 6 | Historia limpia: amend, pull --rebase y squash | Individual, en el repo del equipo |
 | 7 | Conflictos en equipo | Individual, en el repo del equipo |
@@ -43,7 +42,7 @@ Esta guía te acompaña durante toda la sesión: dice qué se hace en cada bloqu
 
 ## <font color="#179287">Cómo usar esta guía</font>
 
-La sesión avanza en **8 bloques** y cada uno abre una pregunta que el siguiente responde. Al final de cada bloque hay una lista **✅ Para seguir adelante**: si puedes marcar todo, estás listo para el siguiente bloque. Si algo no te sale, levanta la mano antes de continuar: casi todo lo que sigue depende de lo anterior.
+La sesión avanza en **8 bloques**, se reparte en varias clases y cada bloque abre una pregunta que el siguiente responde. Los descansos y el punto donde termina cada clase los indica el instructor. Al final de cada bloque hay una lista **✅ Para seguir adelante**: si puedes marcar todo, estás listo para el siguiente bloque. Si algo no te sale, levanta la mano antes de continuar: casi todo lo que sigue depende de lo anterior.
 
 Durante toda la clase, después de cada comando importante, hazte la misma pregunta: **¿dónde está esto: en mi compu, en origin o en los dos?** Para responderla mira dos lugares: la vista **Graph** de VS Code (tu compu) y **GitHub.com** (origin).
 
@@ -441,10 +440,6 @@ Abre el `README.md` y pon el cursor en una línea que haya escrito el líder:
 - [ ] Revisé y aprobé el PR de un compañero
 - [ ] Borré mi rama local y `git branch` solo muestra `main`
 - [ ] Vi los "Merge pull request" y los nudos en `git log --oneline --graph`
-
----
-
-### ☕ Descanso — 10 minutos
 
 ---
 

@@ -35,7 +35,7 @@ Sesión 2 del curso de Git · Material del instructor
 ## <font color="#F05032">Apertura (2 a 3 slides)</font>
 
 ### Slide 0.1: Portada
-- Título: *Git y GitHub en equipo, desde la terminal*. Subtítulo: Sesión 2, intensiva de 4 horas.
+- Título: *Git y GitHub en equipo, desde la terminal*. Subtítulo: Sesión 2 del curso de Git.
 - Logos de UADY, Git y GitHub. Nombre del instructor.
 
 ### Slide 0.2: Reglas del juego de hoy
@@ -183,7 +183,7 @@ Sesión 2 del curso de Git · Material del instructor
 - Frase: *"GitLens solo mira."*
 - Transición: *"¿Qué impide el atajo y qué mantiene la historia legible?"*
 
-**Slide de descanso:** 10 minutos, con un reloj o la hora de regreso.
+**Slide de descanso:** 10 minutos, con un reloj o la hora de regreso. Se usa en cada descanso (uno cada ~2 h) y no tiene un lugar fijo: conviene que coincida con un punto de corte seguro del guion.
 
 ---
 
