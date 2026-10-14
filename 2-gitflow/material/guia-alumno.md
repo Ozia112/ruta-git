@@ -2,7 +2,7 @@
 
 # Guía del alumno: Git en equipo desde la terminal
 
-Etapa 2 del curso de Git · GitFlow · ~12 horas de clase, en varias jornadas
+Etapa 2 del curso de Git · GitFlow · ~11 horas y media de clase, en varias jornadas, + 2 autoestudios y una tarea
 
 <br>
 
@@ -14,7 +14,7 @@ Etapa 2 del curso de Git · GitFlow · ~12 horas de clase, en varias jornadas
 
 ---
 
-Esta guía te acompaña durante toda la sesión: dice qué se hace en cada bloque, cómo se hace cada actividad y qué debes tener listo antes de pasar al siguiente. Si todavía no instalas lo necesario, empieza por los [requisitos del README](../README.md#antes-de-la-clase).
+Esta guía te acompaña durante toda la sesión: dice qué se hace en cada bloque, cómo se hace cada actividad y qué debes tener listo antes de pasar al siguiente. Si todavía no preparas lo necesario, empieza por los [requisitos previos](requisitos.md).
 
 **Cómo nos repartimos las herramientas:**
 
@@ -35,14 +35,15 @@ Esta guía te acompaña durante toda la sesión: dice qué se hace en cada bloqu
 | 5 | Las reglas de la casa | Líder en GitHub.com, el equipo observa |
 | 6 | Historia limpia: amend, pull --rebase y squash | Individual, en el repo del equipo |
 | 7 | Conflictos en equipo | Individual, en el repo del equipo |
-| 8 | Ciclo completo sin red | Equipos |
 | | Cierre: no hay una sola forma correcta | Todo el grupo |
+
+Después de la clase siguen el [Autoestudio 2](autoestudio-2.md) (desde el Bloque 1), el [Autoestudio 3](autoestudio-3.md) (al terminar el Bloque 7) y la [tarea](tarea.md).
 
 ---
 
 ## <font color="#179287">Cómo usar esta guía</font>
 
-La sesión avanza en **8 bloques**, se reparte en varias clases y cada bloque abre una pregunta que el siguiente responde. Los descansos y el punto donde termina cada clase los indica el instructor. Al final de cada bloque hay una lista **✅ Para seguir adelante**: si puedes marcar todo, estás listo para el siguiente bloque. Si algo no te sale, levanta la mano antes de continuar: casi todo lo que sigue depende de lo anterior.
+La sesión avanza en **7 bloques**, se reparte en varias clases y cada bloque abre una pregunta que el siguiente responde. Los descansos y el punto donde termina cada clase los indica el instructor. Al final de cada bloque hay una lista **✅ Para seguir adelante**: si puedes marcar todo, estás listo para el siguiente bloque. Si algo no te sale, levanta la mano antes de continuar: casi todo lo que sigue depende de lo anterior.
 
 Durante toda la clase, después de cada comando importante, hazte la misma pregunta: **¿dónde está esto: en mi compu, en origin o en los dos?** Para responderla mira dos lugares: la vista **Graph** de VS Code (tu compu) y **GitHub.com** (origin).
 
@@ -128,6 +129,8 @@ Ahora haz tu primer commit desde la terminal. Lee en voz baja lo que responde ca
 - [ ] `git log --oneline` me muestra al menos 2 commits
 - [ ] Vi la rama `prueba` bifurcarse en la vista Graph de VS Code
 
+> **Desde aquí puedes empezar el [Autoestudio 2](autoestudio-2.md):** los botones de GitHub Desktop que en clase no se vuelven a practicar (merge, discard, undo, revert y abort merge), ahora con comandos y en tu `practica-terminal`.
+
 ---
 
 ### <font color="#F05032">Bloque 2 — Local y origin: el líder publica, el equipo clona *(equipos)*</font>
@@ -142,7 +145,7 @@ Ahora haz tu primer commit desde la terminal. Lee en voz baja lo que responde ca
 
 **Paso 1 — Prepara la base del equipo en tu repo de práctica**
 1. En tu `practica-terminal`, crea (o reemplaza) el archivo `README.md` con la base del equipo (ver actividad abajo)
-2. Copia del [material de la clase](plantillas-y-robot/) las **dos plantillas**, con la misma ruta y nombre:
+2. Copia del [material de la clase](plantillas/) las **dos plantillas**, con la misma ruta y nombre:
    - `.github/ISSUE_TEMPLATE/tarea.md`
    - `.github/pull_request_template.md`
 
@@ -501,7 +504,7 @@ git reset --hard origin/main
 
 **Paso 5 — Contrata al robot**
 1. En GitHub.com, pestaña **Actions** → **set up a workflow yourself**
-2. Nombra el archivo `revision.yml`, borra el contenido de ejemplo y pega la receta del [material](plantillas-y-robot/.github/workflows/revision.yml) (con **Copy raw file**)
+2. Nombra el archivo `revision.yml`, borra el contenido de ejemplo y pega la receta del [material](plantillas/.github/workflows/revision.yml) (con **Copy raw file**)
 3. Clic en **Commit changes**. Como ya no se puede escribir directo en `main`, elige **Create a new branch for this commit and start a pull request**
 4. En ese PR aparece el check **Sin marcadores de conflicto** corriendo y luego en verde
 5. Un compañero lo aprueba y el líder lo integra: el botón ahora dice **Squash and merge**, la única opción que dejaron. Hasta el robot tuvo que entrar por PR
@@ -766,69 +769,6 @@ git push --force-with-lease
 
 ---
 
-### <font color="#F05032">Bloque 8 — Ciclo completo sin red *(equipos)*</font>
-
-**Qué es:** la prueba real. Vas a repetir el ciclo completo **sin instrucciones paso a paso**, usando solo el [acordeón](#acordeón-el-ritual-de-trabajo-en-equipo) de abajo. El instructor y los asistentes solo responden preguntas; no tocan teclados.
-
-**La consigna:** cada quien crea un issue **para otra persona** del equipo, y cada quien resuelve el issue que le asignaron.
-
----
-
-### 📝 Actividad 6 — Una recomendación
-
-> El issue que crees para tu compañero le pide agregar el archivo `recomendaciones/[su-nombre].md` con algo que recomiende:
-
-```markdown
-# Recomendación de [nombre]
-
-**Qué es:** libro / video / canal / curso
-**Título:** 
-**Enlace:** [abrir](https://...)
-
-## Por qué lo recomiendo
-
-```
-
----
-
-**Cómo se hace (sin red)**
-1. Crea el issue y asígnalo a tu compañero (en la web, o con `gh issue create --assignee usuario-del-compañero`)
-2. Encuentra el tuyo: `gh issue list --assignee @me`
-3. Ritual de antes, trabajo, ritual de después, revisión, `amend` y `pull --rebase` si hacen falta, **Squash and merge** y limpieza
-
-```mermaid
-flowchart LR
-    A["Issue"] --> B["switch main + pull"]
-    B --> C["switch -c rama"]
-    C --> D["add + commit (amend si hace falta)"]
-    D --> E["pull --rebase origin main"]
-    E --> F["push (--force-with-lease si reescribí)"]
-    F --> G["PR + robot + revisión"]
-    G --> H["Squash and merge (cierra el issue)"]
-    H --> I["Limpieza"]
-    I --> A
-```
-
-**Limpieza final, todos:**
-
-```bash
-git switch main
-git pull
-git branch          # solo debe quedar main (si queda alguna rama con PR integrado: git branch -D)
-git fetch --prune
-git log --oneline
-```
-
-**La prueba final:** en `git log --oneline`, cada línea desde el Bloque 5 debe ser **un PR**, con título convencional y `(#número)`. Si encuentras un *"ya ahora sí"* o un *"Merge branch..."* en esa zona, algo del ritual se saltó.
-
-**✅ Para terminar la sesión**
-- [ ] Creé un issue para un compañero y resolví el que me asignaron, solo con el acordeón
-- [ ] La pestaña **Issues** no tiene nada abierto y la pestaña **Pull requests** tampoco
-- [ ] `git branch` solo muestra `main`
-- [ ] Desde el Bloque 5, cada línea de `git log --oneline` es un PR con su `(#número)`
-
----
-
 ### <font color="#F05032">Cierre — No hay una sola forma correcta</font>
 
 Todo lo que hicimos hoy (un issue por tarea, una rama por issue, un visto bueno obligatorio, un robot revisor, rebase para ponerse al día, squash para integrar) es **una** estrategia. La elegimos porque sirve para enseñar y funciona bien para un equipo chico que trabaja en paralelo sobre el mismo repo. **No es la definitiva ni la correcta.**
@@ -846,9 +786,17 @@ Pregúntate en cada fila: *¿esto cambiaría nuestras reglas?*
 | **Frecuencia de entrega** | Se entrega una vez, al final | Se entrega todos los días |
 | **Experiencia del equipo** | Todos dominan Git | Hay quien está empezando |
 
-Ahora les toca a ustedes decidir: de eso trata la tarea **"Nuestras reglas del juego"**. 👉 [Instrucciones completas de la tarea](tarea.md)
+Ahora les toca a ustedes decidir: de eso trata la tarea **"Nuestras reglas del juego"**.
 
 > Las reglas están para servirle al equipo, no al revés. Tu `practica-terminal` se queda contigo: es tu repo para equivocarte sin consecuencias antes de probar algo en el repo del equipo.
+
+**Después de la clase:**
+
+| Qué | De qué trata | Cuándo |
+|---|---|---|
+| [Autoestudio 2](autoestudio-2.md) | Individual: los botones de GitBasic que faltaban (merge, discard, undo, revert y abort merge), con comandos y en tu `practica-terminal` | Desde el Bloque 1 |
+| [Autoestudio 3](autoestudio-3.md) | En equipo: el ciclo completo sin guía, solo con el acordeón, y la prueba de la historia de `main` | Al terminar el Bloque 7, antes de la tarea |
+| [Tarea: "Nuestras reglas del juego"](tarea.md) | Elegir, justificar y documentar la estrategia de trabajo de su proyecto, con video | Antes de la siguiente etapa |
 
 ---
 

@@ -2,7 +2,7 @@
 
 # Git en equipo: trabajo colaborativo desde la terminal
 
-Etapa 2 del curso de Git · GitFlow · ~12 horas de clase, en varias jornadas. Desde aquí llegas a todo lo que necesitas: qué instalar antes de la clase, la guía que seguirás durante la sesión, el material, la tarea y los recursos para repasar por tu cuenta.
+Etapa 2 del curso de Git · GitFlow · ~11 horas y media de clase, en varias jornadas, + 2 autoestudios y una tarea. Desde aquí llegas a todo lo que necesitas: qué preparar antes de la clase, la guía que seguirás durante la sesión, las plantillas, los autoestudios, la tarea y los recursos para repasar por tu cuenta.
 
 <br>
 
@@ -20,7 +20,7 @@ Etapa 2 del curso de Git · GitFlow · ~12 horas de clase, en varias jornadas. D
 
 ---
 
-## <font color="#179287">De qué trata esta sesión</font>
+## <font color="#179287">De qué trata esta etapa</font>
 
 En GitBasic aprendiste Git con botones. En esta dejamos los botones y trabajamos **en equipo, sobre un repositorio compartido, desde la terminal**. No vas a programar nada: todo lo que escribas será texto en Markdown.
 
@@ -40,10 +40,14 @@ Al terminar vas a poder:
 
 | Qué | Para quién | Dónde |
 |---|---|---|
-| **Guía del alumno**: los 8 bloques de la sesión, paso a paso, con sus actividades y el acordeón | Alumnos | [`material/guia-alumno.md`](material/guia-alumno.md) |
-| **Plantillas y robot**: plantillas de issue y de PR, y el robot revisor que copiará tu equipo | Alumnos | [`material/plantillas-y-robot/`](material/plantillas-y-robot/) |
+| **Requisitos previos**: lo que necesitas listo antes de la clase, cómo comprobarlo y cómo arreglarlo si algo quedó pendiente de GitBasic | Alumnos | [`material/requisitos.md`](material/requisitos.md) |
+| **Guía del alumno**: los 7 bloques de la sesión, paso a paso, con sus actividades y el acordeón | Alumnos | [`material/guia-alumno.md`](material/guia-alumno.md) |
+| **Plantillas y robot**: plantillas de issue y de PR, y el robot revisor que copiará tu equipo | Alumnos | [`material/plantillas/`](material/plantillas/) |
+| **Autoestudio 2**: los botones que faltaban, ahora con comandos | Alumnos | [`material/autoestudio-2.md`](material/autoestudio-2.md) |
+| **Autoestudio 3**: el ciclo completo sin red, en equipo | Alumnos | [`material/autoestudio-3.md`](material/autoestudio-3.md) |
 | **Tarea**: "Nuestras reglas del juego" | Alumnos | [`material/tarea.md`](material/tarea.md) |
 | **Lectura de apoyo**: flujos de trabajo colaborativos con Git, útil para la tarea | Alumnos | [`material/lecturas/flujos-git-colaborativos.md`](material/lecturas/flujos-git-colaborativos.md) |
+| **Presentación** de la etapa, en PDF | Alumnos | [`material/Git_y_GitHub_Terminal_Presentacion.pdf`](material/Git_y_GitHub_Terminal_Presentacion.pdf) |
 | **Guion**: el material guía del instructor, con tiempos, frases clave y notas | Instructores | [`guion/guion-instructor.md`](guion/guion-instructor.md) |
 | **Guía de diapositivas**: qué debe llevar la presentación en cada bloque | Instructores | [`guion/guia-slides.md`](guion/guia-slides.md) |
 
@@ -51,9 +55,10 @@ Al terminar vas a poder:
 
 | Término | Qué es |
 |---|---|
-| **Etapa** | Una parte del curso con su propio tema: GitBasic, GitFlow y AgenticFlow. Esta es la Etapa 2 (~12 horas de clase) |
+| **Etapa** | Una parte del curso con su propio tema: GitBasic, GitFlow y AgenticFlow. Esta es la Etapa 2 (~11 horas y media de clase) |
 | **Sesión** | Una clase. Una etapa puede ocupar varias sesiones |
-| **Bloque** | Cada parte de la etapa donde se explica y practica un concepto principal. Esta etapa tiene 8 |
+| **Bloque** | Cada parte de la etapa donde se explica y practica un concepto principal. Esta etapa tiene 7 |
+| **Autoestudio** | Práctica por tu cuenta, fuera de clase |
 | **Guion** | El material guía del instructor |
 | **Guía del alumno** | Lo que tú sigues durante la sesión, bloque por bloque |
 
@@ -61,59 +66,13 @@ Al terminar vas a poder:
 
 ## <font color="#179287">Antes de la clase</font>
 
-De GitBasic ya tienes cuenta de GitHub, Git instalado y GitHub Desktop con tu cuenta vinculada. **No necesitas configurar Git a mano**: GitHub Desktop ya dejó registrados tu nombre y tu correo, y la terminal usa esa misma configuración.
+👉 **Revisa los [requisitos previos](material/requisitos.md) completos.** Dicen qué necesitas, cómo comprobar que ya lo tienes y qué hacer si no; varias cosas vienen de GitBasic, por si no la terminaste o cambiaste de computadora. En resumen:
 
-| Herramienta | Enlace |
-|---|---|
-| GitHub CLI (`gh`) | [cli.github.com](https://cli.github.com/) |
-| VS Code | [code.visualstudio.com](https://code.visualstudio.com/) |
-| Extensión GitLens para VS Code | [GitLens en el Marketplace](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) |
-
-### Instalar Git y GitHub CLI desde la terminal
-
-Si ya tienes Git de GitBasic, el comando lo detecta y solo instala lo que falta. Elige tu sistema operativo:
-
-**Windows** (PowerShell o Terminal):
-
-```powershell
-winget install --id Git.Git -e
-winget install --id GitHub.cli -e
-```
-
-> Al terminar, **cierra y vuelve a abrir la terminal** para que reconozca los comandos nuevos.
-
-**macOS** (requiere [Homebrew](https://brew.sh/)):
-
-```bash
-brew install git gh
-```
-
-**Linux**:
-
-```bash
-# Ubuntu / Debian
-sudo apt update && sudo apt install git gh
-
-# Fedora
-sudo dnf install git gh
-
-# Arch
-sudo pacman -S git github-cli
-```
-
-> Si tu distribución no encuentra el paquete `gh`, sigue las [instrucciones oficiales para Linux](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
-
-**Comprueba que ambos quedaron instalados:**
-
-```bash
-git --version
-gh --version
-```
-
-- [ ] Instalar **GitHub CLI**. Comprueba en la terminal que `gh --version` responde.
-- [ ] Iniciar sesión con `gh auth login` → GitHub.com → HTTPS → *Login with a web browser*. Comprueba con `gh auth status`.
-- [ ] Tener **VS Code** con la extensión **GitLens** instalada. No inicies sesión ni conectes nada en GitLens; si te lo ofrece, cierra la ventana.
-- [ ] Saber quién es el **líder** de tu equipo (3 o 4 personas).
+- [ ] **VS Code** con la extensión **GitLens**, sin iniciar sesión en ella. El curso se da en VS Code: cualquier otro editor es bajo tu propio riesgo.
+- [ ] **Cuenta de GitHub** con correo verificado.
+- [ ] **Git** con tu nombre y tu correo. Si vinculaste GitHub Desktop en GitBasic, ya los tiene.
+- [ ] **GitHub CLI** instalado y con tu sesión iniciada: `gh auth status` responde bien.
+- [ ] **Tu equipo** de 3 o 4 personas, con su líder.
 
 > Si al empezar la clase `gh auth status` no responde bien, avísale a un asistente: te ayudará aparte sin detener al grupo.
 
@@ -121,7 +80,7 @@ gh --version
 
 ## <font color="#179287">Durante la clase</font>
 
-Sigue la [**guía del alumno**](material/guia-alumno.md). La sesión avanza en 8 bloques; cada uno explica qué vas a hacer, cómo hacer cada actividad y qué debes tener listo antes de pasar al siguiente.
+Sigue la [**guía del alumno**](material/guia-alumno.md). La sesión avanza en 7 bloques; cada uno explica qué vas a hacer, cómo hacer cada actividad y qué debes tener listo antes de pasar al siguiente.
 
 | # | Bloque |
 |---|---|
@@ -133,20 +92,21 @@ Sigue la [**guía del alumno**](material/guia-alumno.md). La sesión avanza en 8
 | 5 | Las reglas de la casa |
 | 6 | Historia limpia: amend, pull --rebase y squash |
 | 7 | Conflictos en equipo |
-| 8 | Ciclo completo sin red |
 | | Cierre: no hay una sola forma correcta |
 
 Al final de la guía está el **acordeón del ritual de trabajo en equipo**: la tabla de comandos para repasar el flujo por tu cuenta.
 
 ---
 
-## <font color="#179287">Después de la clase: la tarea</font>
+## <font color="#179287">Después de la clase</font>
 
-En equipo, elegirán una idea de proyecto, investigarán qué estrategia de trabajo colaborativo le conviene y la documentarán en su repositorio. Además, grabarán un video de 5 a 10 minutos explicándola.
+| Qué | De qué trata | Cuándo |
+|---|---|---|
+| [**Autoestudio 2**](material/autoestudio-2.md) | Individual: los botones de GitBasic que en clase no se practican con comandos (merge, discard, undo, revert y abort merge), en tu `practica-terminal` | Desde el Bloque 1 |
+| [**Autoestudio 3**](material/autoestudio-3.md) | En equipo: el ciclo completo sin guía, solo con el acordeón, y la prueba de la historia de `main` | Al terminar el Bloque 7, antes de la tarea |
+| [**Tarea**](material/tarea.md) | En equipo: elegir una idea de proyecto, investigar qué estrategia de trabajo colaborativo le conviene, documentarla en su repositorio y explicarla en un video de 5 a 10 minutos | Antes de la siguiente sesión |
 
-**Es obligatoria, se entrega antes de la siguiente sesión y el video es necesario para acreditar los puntos de formación integral.**
-
-👉 [Instrucciones completas de la tarea](material/tarea.md)
+**La tarea es obligatoria y el video es necesario para acreditar los puntos de formación integral.**
 
 ---
 

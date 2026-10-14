@@ -5,7 +5,7 @@ Comparación de las tres etapas del curso. GitFlow repasa a propósito lo que Gi
 | Etapa | Carpeta | Fuente revisada | Estado |
 |---|---|---|---|
 | **1. GitBasic** | [`1-gitbasic/`](../1-gitbasic/) | [`guion/guion-instructor.md`](../1-gitbasic/guion/guion-instructor.md) y [`material/guia-alumno.md`](../1-gitbasic/material/guia-alumno.md) | Guion de 250 min, sin calibrar con un grupo real |
-| **2. GitFlow** | [`2-gitflow/`](../2-gitflow/) | [`guion/guion-instructor.md`](../2-gitflow/guion/guion-instructor.md) | 740 min; Bloques 1 a 4 calibrados con el grupo de octubre de 2026 |
+| **2. GitFlow** | [`2-gitflow/`](../2-gitflow/) | [`guion/guion-instructor.md`](../2-gitflow/guion/guion-instructor.md) | 685 min de clase (sin el Bloque 8, que pasó al Autoestudio 3) + Autoestudios 2 y 3 + tarea; Bloques 1 a 4 calibrados con el grupo de octubre de 2026 |
 | **3. AgenticFlow** | [`3-agenticflow/`](../3-agenticflow/) | [`guion/guion-instructor.md`](../3-agenticflow/guion/guion-instructor.md) y [`material/guia-alumno.md`](../3-agenticflow/material/guia-alumno.md) | 225 min de clase + 2 autoestudios + proyecto final desplegado; tiempos estimados con el ritmo de GitFlow, sin calibrar |
 | **Siguiente: mentoría** | - | - | Los equipos presentan su proyecto desplegado a ingenieros egresados y con experiencia en el sector. Por diseñar |
 
@@ -24,7 +24,7 @@ Comparación de las tres etapas del curso. GitFlow repasa a propósito lo que Gi
 | **Archivo hilo conductor** | `mi-perfil.md` y `answers-box/equipo-[nombre].md` | `README.md` del equipo e `integrantes/[nombre].md` | `AGENTS.md`, `docs/especificaciones/ESP-01-...md`, `docs/guias/revision.md` y la página publicada con los perfiles de `integrantes/` |
 | **Pregunta que se repite** | - | ¿Dónde está esto: en tu compu, en origin o en los dos? | ¿Cómo lo sé? |
 | **Analogía** | Buzón (origin) | Foto (origin), post-it (rebase), comanda (issue) | La cocina sigue: cocinero sin memoria (agente), recetario (`AGENTS.md`), receta (especificación), el chef que prueba antes de servir (probador), la mesa pública (`main` desplegado) |
-| **Duración en el guion** | 250 min | 740 min | 225 min de clase + 15 de descanso |
+| **Duración en el guion** | 250 min | 685 min (740 antes de sacar el Bloque 8) | 225 min de clase + 15 de descanso |
 | **Duración con esta propuesta** | ~244 min (1 sesión en el papel, sin medir) | ~645 min (3 sesiones, sección 4.3) | 1 sesión + Autoestudio 4 (~3 h 30 min), Autoestudio 5 (~4 h) y proyecto final (~12 h) |
 
 ---
@@ -59,8 +59,8 @@ Comparación de las tres etapas del curso. GitFlow repasa a propósito lo que Gi
 | 5. Las reglas de la casa | Solo squash; borrar ramas automáticamente; ruleset (historia lineal, PR con 1 aprobación); `reset --hard origin/main`; robot con Actions; checks obligatorios y rama al día | 85 |
 | 6. Historia limpia | Fast-forward; `amend`; no usar Update branch; analogía del post-it; `pull --rebase`; `--force-with-lease`; squash and merge; `branch -D`; reglas de oro; `pull.rebase true` | 120 |
 | 7. Conflictos en equipo | Conflicto garantizado (filas de la tabla); CONFLICT durante el rebase; editor de merge; etiquetas invertidas; `rebase --continue` / `--abort`; robot en rojo; File Blame | 115 |
-| 8. Ciclo completo sin red → **Autoestudio 3** | Acordeón; issue asignado a otro; ciclo completo sin guía; limpieza final. **Sale de la clase** (sección 4.2) | (55) |
-| Cierre | Recorrido de la Graph; no hay una sola forma correcta (tabla de factores); tarea; recursos | 35 |
+| 8. Ciclo completo sin red → **[Autoestudio 3](../2-gitflow/material/autoestudio-3.md)** | Acordeón; issue asignado a otro; ciclo completo sin guía; limpieza final. **Hecho:** salió de la clase (sección 4.2) | (55) |
+| Cierre | Recorrido de la Graph; no hay una sola forma correcta (tabla de factores); acordeón, autoestudios y tarea; recursos | 35 |
 
 ### Etapa 3: AgenticFlow (guion de 1 sesión, minutos estimados)
 
@@ -160,6 +160,8 @@ Los minutos son sobre el guion calibrado de GitFlow.
 
 ### 4.1 Huecos del repaso → Autoestudio 2
 
+**Hecho:** [`2-gitflow/material/autoestudio-2.md`](../2-gitflow/material/autoestudio-2.md). Incluye `stash` y `gh repo fork` como retos opcionales; los líderes, cuyo `practica-terminal` se publicó en el Bloque 2, lo hacen en una carpeta nueva.
+
 Con el criterio de "todo lo que se hizo con botones se vuelve a hacer en terminal", estas acciones de GitBasic no se practican en GitFlow: o no aparecen, o solo se mencionan. En lugar de agregarlas a la clase, pasan a una **segunda actividad autodidacta**, cuyo tema principal es *"practica los otros comandos de terminal que faltan"*.
 
 | Botón en GitBasic | Escena | Comando | Situación en GitFlow | En el Autoestudio 2 |
@@ -182,16 +184,20 @@ Con el criterio de "todo lo que se hizo con botones se vuelve a hacer en termina
 
 ### 4.2 Bloque 8 → Autoestudio 3 (en equipo)
 
+**Hecho:** [`2-gitflow/material/autoestudio-3.md`](../2-gitflow/material/autoestudio-3.md). El Bloque 8 salió de la guía, del guion y de la guía de diapositivas.
+
 El Bloque 8 repite el ciclo completo sin guía. Todo lo que practica ya se vio en los Bloques 3 a 7, así que sale de la clase y pasa a una actividad autodidacta.
 
 - **Es en equipo, no individual:** cada quien crea un issue para otro integrante, resuelve el que le asignaron, revisa el PR de un compañero e integra con squash. Por eso no cabe en el Autoestudio 2, que es individual y en un repo solo local. Se hace en el repo del equipo, en el tiempo que acuerden entre ellos.
 - **Qué incluye:** el ciclo completo con el acordeón (tema: `recomendaciones/[tu-nombre].md`), la limpieza final y la prueba de `git log --oneline`: cada línea desde el Bloque 5 es un PR con título convencional y `(#número)`.
-- **Qué se queda en clase:** el **acordeón** se sigue entregando (la guía del alumno ya lo tiene al final; en el guion vive dentro del Bloque 8 y habría que moverlo al cierre). La revisión de la Graph ya está en el recorrido del cierre.
-- **Se cruza con la tarea:** "Nuestras reglas del juego" también obliga a repetir el ciclo completo en equipo (el documento se escribe con issues, ramas y PRs). Conviene decidir si el Autoestudio 3 queda como actividad aparte o como el primer paso de la tarea.
+- **Qué se queda en clase:** el **acordeón** se sigue entregando (la guía del alumno lo tiene al final; en el guion pasó a un anexo y se proyecta en el cierre). La revisión de la Graph ya está en el recorrido del cierre.
+- **Se cruza con la tarea:** "Nuestras reglas del juego" también obliga a repetir el ciclo completo en equipo (el documento se escribe con issues, ramas y PRs). **Decidido:** es una actividad aparte y se hace antes de la tarea.
 
 **Total de GitFlow en clase:** 740 − 40 (ahorros) − 55 (Bloque 8) = **~645 min**.
 
 ### 4.3 Distribución en sesiones de 4 horas (grupos nuevos)
+
+**Pendiente:** los ahorros de la sección 4 y este reparto todavía no se aplican al guion ni a la guía del alumno de GitFlow.
 
 Minutos por bloque con los ahorros aplicados: B1 60 · B2 95 · B3 45 · B4 95 · B5 85 · B6 120 · B7 110 · Cierre 35.
 

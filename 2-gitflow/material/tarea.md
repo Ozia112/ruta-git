@@ -20,7 +20,7 @@ En clase trabajamos con **una** forma de colaborar en un repositorio. No es la �
 |---|---|
 | **Modalidad** | En equipo (el mismo de la clase), sobre su mismo repositorio |
 | **Tiempo estimado** | 4 horas de trabajo en total por equipo |
-| **Fecha límite** | Antes del inicio del siguiente sesión |
+| **Fecha límite** | Antes del inicio de la siguiente sesión |
 | **Acreditación** | La entrega completa, **incluido el video**, es obligatoria para acreditar los puntos de formación integral del programa |
 
 ---

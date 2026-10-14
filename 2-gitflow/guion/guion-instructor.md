@@ -2,7 +2,7 @@
 
 # Guion de clase: Git y GitHub en equipo, desde la terminal
 
-Etapa 2 del curso de Git · GitFlow · ~12 horas de clase, en varias jornadas · Material del instructor
+Etapa 2 del curso de Git · GitFlow · ~11 horas y media de clase, en varias jornadas, + 2 autoestudios y una tarea · Material del instructor
 
 <br>
 
@@ -20,7 +20,7 @@ Etapa 2 del curso de Git · GitFlow · ~12 horas de clase, en varias jornadas ·
 
 ## <font color="#179287">0. Filosofía del guion (léelo antes de dar la clase)</font>
 
-La lógica es la misma que en GitBasic: cada bloque abre una pregunta que **solo el siguiente bloque resuelve**. Repo local antes de repo compartido (primero se quita la interfaz, después se agregan personas); local vs. origin antes de cualquier rama de equipo (si no entienden que hay dos copias, nada de lo que sigue tiene sentido); issue antes de rama (el trabajo nace de una tarea, no de un impulso); flujo feliz antes de reglas (primero ven cómo *debería* ser, luego ven qué impide que alguien se lo salte); reglas antes de "el mundo siguió sin ti" (la regla de "rama al día" obliga a aprender `pull --rebase`); rebase limpio antes de rebase con conflicto; y al final, el ciclo completo **sin guía**.
+La lógica es la misma que en GitBasic: cada bloque abre una pregunta que **solo el siguiente bloque resuelve**. Repo local antes de repo compartido (primero se quita la interfaz, después se agregan personas); local vs. origin antes de cualquier rama de equipo (si no entienden que hay dos copias, nada de lo que sigue tiene sentido); issue antes de rama (el trabajo nace de una tarea, no de un impulso); flujo feliz antes de reglas (primero ven cómo *debería* ser, luego ven qué impide que alguien se lo salte); reglas antes de "el mundo siguió sin ti" (la regla de "rama al día" obliga a aprender `pull --rebase`); rebase limpio antes de rebase con conflicto. El ciclo completo **sin guía** queda fuera de clase, en el Autoestudio 3.
 
 Cinco decisiones de diseño que conviene tener presentes:
 
@@ -34,7 +34,7 @@ Cinco decisiones de diseño que conviene tener presentes:
 
 **Recomendación crítica:** verifica en los primeros 2 minutos que `gh auth status` responde bien en todas las máquinas. Quien no pase se va con un asistente; no se pausa al grupo.
 
-### Mapa general (storyboard): ~740 minutos (~12 horas) de trabajo en clase
+### Mapa general (storyboard): ~685 minutos (~11 horas y media) de trabajo en clase
 
 | # | Bloque | Tema del temario | Duración | Acumulado | Herramienta protagonista |
 |---|--------|-------------------|----------|-----------|--------------------------|
@@ -46,23 +46,26 @@ Cinco decisiones de diseño que conviene tener presentes:
 | 5 | Bloque 5 | Las reglas de la casa: protección de ramas, squash e historia lineal + el robot revisor | 85 min | 415 min | GitHub Web (Settings, Rulesets, Actions) |
 | 6 | Bloque 6 | Historia limpia: `amend`, `pull --rebase` y squash | 120 min | 535 min | git + Graph de VS Code + GitHub Web |
 | 7 | Bloque 7 | Conflictos en equipo | 115 min | 650 min | git + editor de merge de VS Code + GitLens |
-| 8 | Bloque 8 | Ciclo completo sin red + limpieza | 55 min | 705 min | Todo junto |
-| - | - | Cierre: no hay una sola forma correcta + tarea | 35 min | 740 min | - |
+| - | - | Cierre: no hay una sola forma correcta, autoestudios y tarea | 35 min | 685 min | - |
 | - | - | *Descansos* | 10 min cada ~2 h | (no incluidos) | - |
 
-**Suma de control:** 60+110+45+115+85+120+115+55+35 = 740 min, sin contar descansos.
+**Suma de control:** 60+110+45+115+85+120+115+35 = 685 min, sin contar descansos.
+
+**Fuera de clase:** el [Autoestudio 2](../material/autoestudio-2.md) (individual, desde el final del Bloque 1), el [Autoestudio 3](../material/autoestudio-3.md) (en equipo, al terminar el Bloque 7; antes era el Bloque 8 de la clase) y la [tarea](../material/tarea.md). Ver *Después de la clase*, al final.
 
 **De dónde salen estos tiempos:** la primera versión del guion sumaba 240 min y con un grupo real (octubre de 2026) resultó unas **3.3 veces** más corta de lo necesario: en 4 h 30 min el grupo llegó a la mitad del Bloque 4, que en el plan estaba en el minuto 85. Lo que más tiempo consumió: esperar a que el líder terminara su parte (Bloque 2), leer y entender lo que responde la terminal en cada comando, y las preguntas sobre local vs. origin, `fetch` vs. `pull` e issues. Los Bloques 1 a 4 están calibrados con esa medición; del Bloque 5 en adelante los tiempos son una extrapolación al mismo ritmo, así que conviene anotar los tiempos reales para ajustarlos.
 
 **Puntos de corte:** la sesión no cabe en una sola clase. Los finales de los Bloques 3, 4, 5, 6 y 7 son puntos de corte seguros: el repo queda en un estado estable y se puede retomar otro día. **No** cortes a mitad del Bloque 2 antes del primer push del líder (su historia solo vive en su compu) ni a mitad de un rebase en los Bloques 6 y 7. Al retomar, dedica unos 10 min a la reentrada: todos abren el repo del equipo, `git switch main`, `git pull` y `git status`; quien tenga una rama abierta vuelve a ella con `git switch`, y se recuerda en voz alta en qué paso del ritual se quedó cada quien.
 
-**Si el grupo va atrasado,** los primeros recortes recomendados son, en este orden: el Bloque 8 (~55 min; la tarea para casa ya obliga a repetir el ciclo completo), la rama de práctica del paso 5 del Bloque 1 (~12 min), y la revisión cruzada del Bloque 4 (un solo revisor por PR, sin comentarios en línea; ahorra ~10 min). El Bloque 6 no se recorta: es donde se enseña a dejar la historia limpia. El cierre tampoco: es donde se deja claro que todo lo de hoy es una opción, no la regla.
+**Si el grupo va atrasado,** los primeros recortes recomendados son, en este orden: la rama de práctica del paso 5 del Bloque 1 (~12 min; el Autoestudio 2 la retoma), y la revisión cruzada del Bloque 4 (un solo revisor por PR, sin comentarios en línea; ahorra ~10 min). El Bloque 6 no se recorta: es donde se enseña a dejar la historia limpia. El cierre tampoco: es donde se deja claro que todo lo de hoy es una opción, no la regla.
 
 ---
 
 ## <font color="#179287">Acto 0: Preparación previa (antes de la clase)</font>
 
 **Del alumno (se pide con al menos una semana de anticipación):**
+
+Todo esto está, con cómo comprobarlo y cómo arreglarlo, en los [requisitos previos](../material/requisitos.md): envíalos junto con el material. Incluyen lo que viene de GitBasic, por si alguien no la terminó o cambió de computadora.
 
 1. Lo que ya tienen de GitBasic: cuenta de GitHub, Git instalado y GitHub Desktop con la cuenta vinculada. **No hay que configurar Git a mano:** al vincular la cuenta, GitHub Desktop ya dejó registrado su nombre y correo, y esa misma configuración es la que usará la terminal.
 2. **GitHub CLI** instalado (`gh --version` responde) y **autenticado** (`gh auth login` → GitHub.com → HTTPS → "Login with a web browser"). Si el alumno hizo el Reto 5 del autoestudio, ya tiene ventaja.
@@ -72,7 +75,7 @@ Cinco decisiones de diseño que conviene tener presentes:
 **Del instructor:**
 
 1. Un repositorio de demostración propio para proyectar cada paso antes de que lo hagan los equipos.
-2. El **material de la sesión** (carpeta [`2-gitflow/material/`](../material/) del repositorio del curso, ver Anexo), con el enlace enviado por correo antes de la clase. Contiene la guía del alumno, la tarea y la carpeta `plantillas-y-robot/` con la plantilla de issue, la plantilla de PR y la receta del robot. Los líderes copian esos tres archivos cuando la clase lo indica; nadie los escribe.
+2. El **material de la sesión** (carpeta [`2-gitflow/material/`](../material/) del repositorio del curso, ver Anexo), con el enlace enviado por correo antes de la clase. Contiene los requisitos previos, la guía del alumno, los autoestudios 2 y 3, la tarea y la carpeta `plantillas/` con la plantilla de issue, la plantilla de PR y la receta del robot. Los líderes copian esos tres archivos cuando la clase lo indica; nadie los escribe.
 3. Recordar a los líderes que su repo de equipo debe ser **público**: la protección de ramas es gratuita en repos públicos de cuentas personales; en repos privados requiere un plan de pago o una organización con GitHub Team.
 
 ---
@@ -115,6 +118,8 @@ Cinco decisiones de diseño que conviene tener presentes:
 5. (12 min) **Repaso de GitBasic, sin botones.** `git switch -c prueba`, un cambio a `notas.md`, commit, `git switch main` (o `master`): el cambio desaparece del archivo; `git switch prueba`: reaparece. Abrir la vista **Graph** del panel Source Control de VS Code y ver la bifurcación, igual que la vieron en GitBasic.
 
 Frase de cierre: *"Este repo es solo suyo. No tiene nube, no tiene a nadie más. Y así se va a quedar: es su cuaderno de práctica."*
+
+**Se deja el Autoestudio 2:** desde aquí ya pueden practicar por su cuenta, en este mismo repo, los botones de GitBasic que la clase no vuelve a ver con comandos (merge, discard, undo, revert y abort merge). Los líderes, cuyo repo se publicará en el Bloque 2, lo hacen en una carpeta nueva.
 
 **Diagrama:**
 
@@ -305,7 +310,7 @@ gitGraph
 3. (12 min) **Ni el dueño.** El líder repite el truco del paso 1: commit directo en `main` y `git push`. Ahora la terminal responde con un rechazo (*"Repository rule violations"*, *"Changes must be made through a pull request"*). Frase clave: *"El líder es el administrador del repo y aun así no pudo. La regla no es para desconfiar de alguien, es para que nadie tenga que acordarse."*
 
    Para limpiar su `main` local, que ahora tiene un commit que origin nunca va a aceptar: `git reset --hard origin/main`. Traducción: *"haz que mi main sea exactamente igual a la foto de origin."* Advertencia en voz alta: este comando **tira** los cambios locales que no estén en origin; solo se usa cuando uno está seguro de que no los quiere.
-4. (20 min) **Contratar al robot.** El líder, en GitHub.com, pestaña **Actions → set up a workflow yourself**. GitHub propone un archivo dentro de `.github/workflows/`; el líder le pone de nombre `revision.yml`, borra el contenido de ejemplo y **pega la receta** del material del curso (`2-gitflow/material/plantillas-y-robot/.github/workflows/revision.yml`, con *Copy raw file*). Explicación sin código: *"Esto es una receta. Cada vez que alguien abra un PR, GitHub va a prestar una computadora por unos segundos, va a seguir la receta y va a reportar el resultado en el PR. Esta receta revisa que nadie deje marcadores de conflicto olvidados. En equipos reales, la receta corre pruebas, revisa ortografía o publica la página."*
+4. (20 min) **Contratar al robot.** El líder, en GitHub.com, pestaña **Actions → set up a workflow yourself**. GitHub propone un archivo dentro de `.github/workflows/`; el líder le pone de nombre `revision.yml`, borra el contenido de ejemplo y **pega la receta** del material del curso (`2-gitflow/material/plantillas/.github/workflows/revision.yml`, con *Copy raw file*). Explicación sin código: *"Esto es una receta. Cada vez que alguien abra un PR, GitHub va a prestar una computadora por unos segundos, va a seguir la receta y va a reportar el resultado en el PR. Esta receta revisa que nadie deje marcadores de conflicto olvidados. En equipos reales, la receta corre pruebas, revisa ortografía o publica la página."*
 
    Al guardar (**Commit changes**), GitHub ya no deja escribir directo en `main`: elegir **Create a new branch for this commit and start a pull request**. Ese mismo PR es la primera prueba del robot: en la parte de abajo aparece el check **Sin marcadores de conflicto** corriendo y luego en verde. Un compañero lo aprueba y el líder lo integra; el botón verde ahora dice **Squash and merge**, la única opción que dejaron. *"Hasta el robot tuvo que entrar por PR."* Desde la terminal también se puede consultar: `gh run list`.
 5. (12 min) **Hacer obligatorio al robot.** El líder vuelve al ruleset `proteger-main` → marca **Require status checks to pass** → **Add checks** → busca y agrega **Sin marcadores de conflicto** (ya aparece porque corrió una vez) → marca **Require branches to be up to date before merging** → **Save changes**. Traducir: "el robot tiene que dar el visto bueno" y "tu rama tiene que estar al día con main". En la terminal, todos: `git switch main` y `git pull` para traerse la receta.
@@ -452,58 +457,7 @@ gitGraph
 
 *(La rama `feature/fila-luis-rebase` es la misma rama de Luis después del `pull --rebase`: sus commits se volvieron a pegar sobre el squash de Ana. Al integrarse, entra a main como un solo commit.)*
 
-**Transición:** *"Ya hicieron todo con alguien guiándolos paso a paso. La pregunta real es: mañana, solos, frente a un repo de equipo, ¿saben qué hacer primero?"*
-
----
-
-### <font color="#F05032">Bloque 8: Ciclo completo sin red + limpieza (55 min)</font>
-
-**Objetivo:** repetir el ciclo entero **sin instrucciones paso a paso**, usando solo el acordeón del ritual, y dejar el repo limpio.
-
-**Guion:**
-
-1. (5 min) Proyectar el acordeón (abajo) y apagar la pantalla del instructor. La consigna: *"Cada quien crea un issue para otra persona del equipo, y cada quien resuelve el issue que le asignaron. Solo con el acordeón."* Tema libre en Markdown: una recomendación (libro, video, canal) en un archivo `recomendaciones/[tu-nombre].md`.
-2. (40 min) Ciclo completo: issue asignado a un compañero (en la web, o con `gh issue create --assignee usuario-del-compañero`), `gh issue list --assignee @me` para encontrar el propio, ritual de antes, trabajo, ritual de después, revisión, `amend` y `pull --rebase` si hacen falta, squash, limpieza. El instructor y los asistentes solo responden preguntas; no tocan teclados.
-3. (10 min) **Limpieza final**, todos: `git switch main`, `git pull`, `git branch` (solo debe quedar `main`; si queda alguna rama con PR ya integrado, `git branch -D`), `git fetch --prune`, una mirada a la pestaña Issues (todo cerrado) y a la pestaña Pull requests (nada abierto), y la prueba final: `git log --oneline` en `main`. Cada línea desde el Bloque 5 debe ser *un PR* con título convencional y `(#número)`. Si alguien encuentra un *"ya ahora sí"* o un *"Merge branch..."* en esa zona, algo del ritual se saltó: buen tema para la plenaria.
-
-**Acordeón del ritual diario (se proyecta y se entrega):**
-
-| Momento | Qué hago | Dónde / comando |
-|---|---|---|
-| **Antes** | Ver qué me toca | GitHub.com → Issues, o `gh issue list --assignee @me` |
-| | Pararme en la base | `git switch main` |
-| | Ponerme al día (siempre fast-forward) | `git pull` |
-| | Abrir mi desvío | `git switch -c feature/[número]-[descripción]` |
-| **Durante** | Ver qué cambió | `git status` / `git diff` |
-| | Guardar una foto pequeña | `git add [archivo]` + `git commit -m "tipo: mensaje"` |
-| | Corregir mi último commit (antes de subirlo) | `git add [archivo]` + `git commit --amend --no-edit` |
-| | Ver dónde estoy | `git log --oneline --graph` / Graph de VS Code |
-| | Si main avanzó, ponerme al día | `git pull --rebase origin main` |
-| **Después** | Subir mi rama | `git push -u origin [rama]` (la primera vez) / `git push` |
-| | Subir después de un rebase o amend | `git push --force-with-lease` |
-| | Pedir revisión (título = futuro commit en main) | `gh pr create --web` (con plantilla) o `gh pr create --base main --title "tipo: qué hice" --body "Closes #[número]"` |
-| | Ver el robot | Checks del PR en GitHub.com, o `gh pr checks` |
-| | Revisar a otros | GitHub.com → Files changed → Review changes |
-| | Integrar | GitHub.com → **Squash and merge** |
-| | Tras el squash: limpiar | `git switch main` + `git pull` + `git branch -D [rama]` (tras ver el PR en *Merged*) |
-| **Pánico** | Salir de un rebase a medias | `git rebase --abort` |
-| | Deshacer algo que ya está en main | `git revert [hash]` en una rama nueva + PR |
-| | Dejar mi main igual a origin | `git reset --hard origin/main` (tira lo local) |
-
-**Diagrama:**
-
-```mermaid
-flowchart LR
-    A["Issue"] --> B["switch main + pull"]
-    B --> C["switch -c rama"]
-    C --> D["add + commit (varias veces, amend si hace falta)"]
-    D --> E["pull --rebase origin main"]
-    E --> F["push (--force-with-lease si reescribí)"]
-    F --> G["PR + robot + revisión"]
-    G --> H["Squash and merge (cierra el issue)"]
-    H --> I["Limpieza"]
-    I --> A
-```
+**Transición:** *"Ya hicieron todo con alguien guiándolos paso a paso. La pregunta real es: mañana, solos, frente a un repo de equipo, ¿saben qué hacer primero? Esa pregunta la responden ustedes en el Autoestudio 3. Antes, una advertencia."*
 
 ---
 
@@ -542,15 +496,17 @@ E incluso dentro de lo de hoy hay alternativas legítimas: rebase merging en vez
 
 Cierre de la idea: *"Esto es lo mágico de usar Git directamente y no a través de una interfaz que decide por ustedes: **se pueden adaptar**. Pueden experimentar, poner sus propias reglas, cambiarlas cuando dejen de servir, e ignorarlas cuando tenga sentido, siempre que el equipo lo sepa y lo acuerde. Un botón les da una sola forma de hacer las cosas; la terminal les da todas. Las reglas están para servirle al equipo, no al revés."*
 
-### 3. La tarea para casa (10 min)
+### 3. Lo que sigue: acordeón, autoestudios y tarea (10 min)
 
-Proyectar [`material/tarea.md`](../material/tarea.md), que es el mismo documento que se envía a los alumnos. Es la continuación directa de la advertencia anterior: ahora les toca a ellos decidir. Puntos que conviene decir en voz alta, porque son los que más se olvidan:
+**El acordeón** (en el Anexo y al final de la guía del alumno) se proyecta y se entrega: es la única herramienta del **Autoestudio 3**, donde el equipo repite el ciclo completo sin guía, con issues cruzados, revisión cruzada y la prueba de la historia de `main`. Se hace **antes** de la tarea. Recuerda también el **Autoestudio 2**, si alguien no lo ha hecho.
+
+Después, la tarea: proyectar [`material/tarea.md`](../material/tarea.md), que es el mismo documento que se envía a los alumnos. Es la continuación directa de la advertencia anterior: ahora les toca a ellos decidir. Puntos que conviene decir en voz alta, porque son los que más se olvidan:
 
 - **Qué:** elegir una idea de proyecto, investigar al menos tres estrategias de trabajo y dos formas de integrar, elegir la que encaja con su caso y justificarla en `docs/soporte/workflow_y_politicas_de_trabajo_colaborativo.md`.
 - **Cómo:** el documento se escribe con el flujo de trabajo (issue, rama, PR revisado). El historial del repo cuenta como parte de la entrega.
 - **Lo que casi nadie hace si no se pide:** documentar también las reglas que decidieron **no** tener, y ajustar la configuración del repo si eligieron algo distinto a lo de clase.
 - **Video:** de 5 a 10 minutos, con diapositivas y con todos los integrantes. Debe explicar el documento, no leerlo.
-- **Fecha y acreditación:** antes del siguiente sesión. **Sin el video no se acreditan los puntos de formación integral.**
+- **Fecha y acreditación:** antes de la siguiente sesión. **Sin el video no se acreditan los puntos de formación integral.**
 
 ### 4. Recursos y preguntas (5 min)
 
@@ -561,11 +517,23 @@ Proyectar [`material/tarea.md`](../material/tarea.md), que es el mismo documento
 
 ---
 
+## <font color="#179287">Después de la clase: qué practica cada actividad</font>
+
+| Actividad | Modalidad | Cuándo se deja | Qué practica | Por qué está fuera de clase |
+|---|---|---|---|---|
+| [Autoestudio 2](../material/autoestudio-2.md) | Individual, en `practica-terminal` | Al terminar el Bloque 1 | Los botones de GitBasic que la clase no traduce: `merge` (fast-forward y merge commit), `restore`, `reset --soft HEAD~1`, `revert`, un conflicto con `merge --abort` y su resolución, y de forma opcional `stash` y `gh repo fork` | El repaso de GitBasic en terminal es intencional, pero estas acciones no caben en la clase sin alargarla. En un repo solo local, equivocarse no cuesta nada |
+| [Autoestudio 3](../material/autoestudio-3.md) | En equipo, en el repo del equipo | Al terminar el Bloque 7, antes de la tarea | El ciclo completo sin guía, solo con el acordeón: issues cruzados, revisión cruzada, squash, limpieza y la prueba de la historia de `main` | Era el Bloque 8: todo lo que practica ya se vio en los Bloques 3 a 7. Sacarlo de la clase ahorra ~55 min |
+| [Tarea](../material/tarea.md) | En equipo | En el cierre | Decidir y documentar la estrategia de trabajo de su proyecto, con video | Es la continuación de la advertencia final |
+
+**Cómo se entregan:** las bitácoras de los autoestudios entran al repo del equipo con el ritual completo (issue, rama, PR revisado y squash): `docs/soporte/autoestudio-2/[nombre].md` para cada integrante y `docs/soporte/autoestudio-3.md` para el equipo. El historial del repo es parte de la evidencia. Si el Autoestudio 2 se hace antes del Bloque 4, su bitácora se entrega después de ese bloque, cuando ya saben abrir un PR.
+
+---
+
 ## <font color="#179287">Notas finales para el instructor</font>
 
 - El Bloque 2 es el que más se atrasa (invitaciones sin aceptar, autenticación de `gh` fallida, líderes que crean el repo en GitHub **con** README y luego no pueden hacer push). Si un líder marcó "Add a README", lo más rápido es borrar ese repo en `Settings → Danger Zone` y crearlo de nuevo vacío.
 - Si al hacer el primer commit del Bloque 1 la terminal responde *"Please tell me who you are"*, ese alumno no tiene la configuración que deja GitHub Desktop (por ejemplo, porque usa otra computadora). Resuélvelo aparte con un asistente: `git config --global user.name` y `git config --global user.email` con el correo de su cuenta de GitHub.
-- El Bloque 7 es el clímax: no lo recortes. Si el tiempo aprieta, recorta el Bloque 8: la tarea para casa obliga a repetir el ciclo completo sin guía.
+- El Bloque 7 es el clímax: no lo recortes. Si el tiempo aprieta, revisa los recortes del storyboard; el ciclo completo sin guía ya está fuera de clase, en el Autoestudio 3.
 - **GitLens, solo lo gratuito y sin cuenta.** En la clase se usan únicamente **Current Line Blame** (autor al final de la línea), los **hovers** (tarjeta del commit), **CodeLens** (autores arriba del archivo), **File Blame** (anotación de todo el archivo) y **Open Commit on GitHub** (solo abre el navegador). Quedan fuera: *Commit Graph* de GitLens (se usa la Graph nativa de VS Code), *Explain* (IA, requiere cuenta de GitKraken), *Connect to GitHub* y *Launchpad* (integraciones que requieren cuenta), y los botones de acción del menú del commit (*Revert*, *Reset*, *Rebase*, *Switch to Commit*...), que sí funcionan pero harían por nosotros lo que en esta sesión se hace con comandos. Si un alumno los descubre, la respuesta es la misma idea que abrió la clase: *"ese botón también es un comando; hoy lo escribimos nosotros."*
 - **Etiquetas invertidas en rebase:** es el error más común de la sesión. Recuérdalo antes de que abran el editor de conflictos, no después.
 - Si alguien se pierde por completo en su copia del equipo, la salida más rápida y segura es la de GitBasic: borrar la carpeta y volver a clonar con `gh repo clone`. Todo lo que ya estaba en origin sigue ahí. (Esto **no** aplica al repo del líder del Bloque 1 si todavía no hizo push: ese es el único lugar donde vive su historia.)
@@ -578,7 +546,7 @@ Proyectar [`material/tarea.md`](../material/tarea.md), que es el mismo documento
 
 ## <font color="#179287">Anexo para el instructor: material de la sesión</font>
 
-El material del alumno vive en la carpeta [`2-gitflow/material/`](../material/) del repositorio del curso, y el enlace se envía por correo antes de la clase. Además de la [guía del alumno](../material/guia-alumno.md) y la [tarea](../material/tarea.md), incluye la carpeta [`plantillas-y-robot/`](../material/plantillas-y-robot/) con los tres archivos de configuración que copian los equipos. Ninguno de esos tres archivos se proyecta completo ni se explica línea por línea: en clase solo se ve su efecto.
+El material del alumno vive en la carpeta [`2-gitflow/material/`](../material/) del repositorio del curso, y el enlace se envía por correo antes de la clase. Además de los [requisitos previos](../material/requisitos.md), la [guía del alumno](../material/guia-alumno.md), los autoestudios [2](../material/autoestudio-2.md) y [3](../material/autoestudio-3.md) y la [tarea](../material/tarea.md), incluye la carpeta [`plantillas/`](../material/plantillas/) con los tres archivos de configuración que copian los equipos. Ninguno de esos tres archivos se proyecta completo ni se explica línea por línea: en clase solo se ve su efecto.
 
 | Archivo | Qué hace | Quién lo copia y cuándo |
 |---|---|---|
@@ -587,3 +555,46 @@ El material del alumno vive en la carpeta [`2-gitflow/material/`](../material/) 
 | `.github/workflows/revision.yml` | El robot: en cada PR hacia `main` busca marcadores de conflicto (`<<<<<<<` o `>>>>>>>`) olvidados en archivos Markdown y falla si encuentra alguno. El nombre de su check, que se busca al configurar el ruleset, es **Sin marcadores de conflicto** | El líder, desde GitHub.com (*Actions → set up a workflow yourself*), en el Bloque 5 |
 
 Las plantillas son intencionalmente mínimas: sirven para no escribir a ciegas, no para imponer una forma de trabajar. En la tarea, cada equipo decide si las conserva, las amplía o las elimina.
+
+---
+
+## <font color="#179287">Anexo: el acordeón del ritual (se proyecta y se entrega)</font>
+
+Se proyecta en el cierre y se entrega a todos: es la herramienta del [Autoestudio 3](../material/autoestudio-3.md), donde el equipo repite el ciclo completo sin guía. La guía del alumno lo tiene al final.
+
+| Momento | Qué hago | Dónde / comando |
+|---|---|---|
+| **Antes** | Ver qué me toca | GitHub.com → Issues, o `gh issue list --assignee @me` |
+| | Pararme en la base | `git switch main` |
+| | Ponerme al día (siempre fast-forward) | `git pull` |
+| | Abrir mi desvío | `git switch -c feature/[número]-[descripción]` |
+| **Durante** | Ver qué cambió | `git status` / `git diff` |
+| | Guardar una foto pequeña | `git add [archivo]` + `git commit -m "tipo: mensaje"` |
+| | Corregir mi último commit (antes de subirlo) | `git add [archivo]` + `git commit --amend --no-edit` |
+| | Ver dónde estoy | `git log --oneline --graph` / Graph de VS Code |
+| | Si main avanzó, ponerme al día | `git pull --rebase origin main` |
+| **Después** | Subir mi rama | `git push -u origin [rama]` (la primera vez) / `git push` |
+| | Subir después de un rebase o amend | `git push --force-with-lease` |
+| | Pedir revisión (título = futuro commit en main) | `gh pr create --web` (con plantilla) o `gh pr create --base main --title "tipo: qué hice" --body "Closes #[número]"` |
+| | Ver el robot | Checks del PR en GitHub.com, o `gh pr checks` |
+| | Revisar a otros | GitHub.com → Files changed → Review changes |
+| | Integrar | GitHub.com → **Squash and merge** |
+| | Tras el squash: limpiar | `git switch main` + `git pull` + `git branch -D [rama]` (tras ver el PR en *Merged*) |
+| **Pánico** | Salir de un rebase a medias | `git rebase --abort` |
+| | Deshacer algo que ya está en main | `git revert [hash]` en una rama nueva + PR |
+| | Dejar mi main igual a origin | `git reset --hard origin/main` (tira lo local) |
+
+**Diagrama:**
+
+```mermaid
+flowchart LR
+    A["Issue"] --> B["switch main + pull"]
+    B --> C["switch -c rama"]
+    C --> D["add + commit (varias veces, amend si hace falta)"]
+    D --> E["pull --rebase origin main"]
+    E --> F["push (--force-with-lease si reescribí)"]
+    F --> G["PR + robot + revisión"]
+    G --> H["Squash and merge (cierra el issue)"]
+    H --> I["Limpieza"]
+    I --> A
+```

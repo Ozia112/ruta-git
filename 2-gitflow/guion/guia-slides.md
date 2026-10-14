@@ -26,9 +26,9 @@ Etapa 2 del curso de Git · GitFlow · Material del instructor
 - **Estructura repetible por bloque:** portada de bloque (número, título, pregunta que abre) → slides de contenido → slide de frase clave o diagrama → slide de transición (la pregunta que abre el siguiente bloque).
 - **Pregunta de "¿dónde está esto?".** Conviene un icono o etiqueta fija de tres estados (💻 local / ☁️ origin / ambos) para reutilizar en las slides de comandos.
 - **Recursos visuales disponibles:** logos en [`assets/logos/`](../../assets/logos/) (Git, GitHub, UADY). Los diagramas Mermaid del guion se pueden exportar tal cual (mermaid.live) o redibujar.
-- **Slides "fijas":** la tabla de traducción (Bloque 1), el ritual (Bloque 4) y el acordeón (Bloque 8) deben poder quedarse proyectadas varios minutos mientras los alumnos trabajan: letra grande y sin animaciones.
+- **Slides "fijas":** la tabla de traducción (Bloque 1), el ritual (Bloque 4) y el acordeón (cierre) deben poder quedarse proyectadas varios minutos mientras los alumnos trabajan: letra grande y sin animaciones.
 
-**Conteo estimado:** 45 a 55 diapositivas.
+**Conteo estimado:** 43 a 53 diapositivas.
 
 ---
 
@@ -44,7 +44,7 @@ Etapa 2 del curso de Git · GitFlow · Material del instructor
 - Frase: *"La terminal no es el tema, es el volante."*
 
 ### Slide 0.3: Mapa de la sesión
-- Los 8 bloques + descanso + cierre, con su duración (versión simplificada de la tabla del storyboard).
+- Los 7 bloques + descanso + cierre, con su duración (versión simplificada de la tabla del storyboard).
 - Opcional: marcar con color las dos mitades (antes y después del descanso).
 
 > Antes de pasar al Bloque 1: verificar `gh auth status` en todas las máquinas. Se puede dejar una slide de "check-in" con ese comando.
@@ -76,6 +76,7 @@ Etapa 2 del curso de Git · GitFlow · Material del instructor
 - Captura de la vista **Graph** nativa de VS Code con la bifurcación.
 - Diagrama: *Botón en Desktop → comando de git ← tú en la terminal*.
 - Frase de cierre: *"Este repo es solo suyo: es su cuaderno de práctica."*
+- Aviso: **Autoestudio 2**, los botones de GitBasic que faltan (merge, discard, undo, revert y abort merge), con comandos y en este mismo repo.
 - Transición: *"Hay dos copias del repo. ¿Cuál es la de verdad?"*
 
 ---
@@ -308,28 +309,11 @@ Etapa 2 del curso de Git · GitFlow · Material del instructor
 - Los siguientes PR vuelven a chocar: cada autor resuelve solo.
 - Captura de **GitLens: Toggle File Blame** sobre la tabla: cada fila con su autor y su `(#número)`.
 - Frase: *"Cuatro personas en paralelo, con conflictos, y main sigue siendo una línea recta."*
-- Transición: *"Mañana, solos, ¿saben qué hacer primero?"*
+- Transición: *"Mañana, solos, ¿saben qué hacer primero?"* (lo responden en el Autoestudio 3).
 
 ---
 
-## <font color="#F05032">Bloque 8: Ciclo completo sin red (3 slides)</font>
-
-### Slide 8.1: La consigna
-- *"Cada quien crea un issue para otra persona, y cada quien resuelve el que le asignaron. Solo con el acordeón."*
-- Tema: `recomendaciones/[tu-nombre].md` (libro, video o canal).
-- Comandos útiles: `gh issue create --assignee …`, `gh issue list --assignee @me`.
-
-### Slide 8.2: Acordeón del ritual diario (slide fija, también se entrega)
-- La tabla completa del guion agrupada por **Antes / Durante / Después / Pánico**. Probablemente necesite dos slides o un diseño muy compacto; conviene también entregarla en PDF.
-- Diagrama circular del ciclo (Issue → switch + pull → rama → commits → rebase → push → PR → squash → limpieza → Issue).
-
-### Slide 8.3: Limpieza final y la prueba
-- Checklist: `git switch main`, `git pull`, `git branch` (solo `main`), `git fetch --prune`, Issues cerrados, PR vacíos.
-- La prueba: `git log --oneline` desde el Bloque 5 = un PR por línea. Un *"ya ahora sí"* o un *"Merge branch…"* significa que algo del ritual se saltó.
-
----
-
-## <font color="#F05032">Cierre (5 a 6 slides)</font>
+## <font color="#F05032">Cierre (6 a 7 slides)</font>
 
 ### Slide C.1: El recorrido
 - Captura de la **Graph** real de un equipo, anotada de abajo hacia arriba con el bloque que produjo cada tramo: `git init` → publicación → nudos de los perfiles → entra el robot → línea recta (rebase y conflictos).
@@ -348,15 +332,21 @@ Etapa 2 del curso de Git · GitFlow · Material del instructor
 - Alternativas legítimas: rebase merging, merge commits, sin protección.
 - Frase: *"Un botón les da una sola forma; la terminal les da todas. Las reglas están para servirle al equipo."*
 
-### Slide C.5: La tarea
+### Slide C.5: El acordeón y lo que sigue (slide fija, también se entrega)
+- La tabla del acordeón del guion agrupada por **Antes / Durante / Después / Pánico**. Probablemente necesite dos slides o un diseño muy compacto; conviene también entregarla en PDF.
+- Diagrama circular del ciclo (Issue → switch + pull → rama → commits → rebase → push → PR → squash → limpieza → Issue).
+- **Autoestudio 3** (en equipo, antes de la tarea): el ciclo completo solo con este acordeón, con issues cruzados, revisión cruzada y la prueba de la historia de `main`.
+- **Autoestudio 2** (individual): recordatorio para quien no lo haya hecho.
+
+### Slide C.6: La tarea
 - **Qué:** proyecto propio, ≥3 estrategias de trabajo y ≥2 formas de integrar, elegir y justificar en `docs/soporte/workflow_y_politicas_de_trabajo_colaborativo.md`.
 - **Cómo:** con el flujo de trabajo (issue, rama, PR); el historial cuenta.
 - **Lo que casi nadie hace:** documentar las reglas que decidieron **no** tener y ajustar la configuración del repo.
 - **Video:** 5 a 10 min, con slides y todos los integrantes; explicar, no leer.
-- **Fecha:** antes del siguiente sesión. **Sin video no se acreditan los puntos.** (Destacado en color.)
+- **Fecha:** antes de la siguiente sesión. **Sin video no se acreditan los puntos.** (Destacado en color.)
 - Referencia: [`material/tarea.md`](../material/tarea.md).
 
-### Slide C.6: Recursos y despedida
+### Slide C.7: Recursos y despedida
 - Recursos: `gh help`, docs de GitHub (flujos, rulesets, métodos de merge), Pro Git en español, Oh My Git!.
 - Recordatorio: `practica-terminal` es su repo para equivocarse sin consecuencias.
 - Frase final: *"Lo que aprendieron hoy no es Git, es trabajo en equipo."*
@@ -374,4 +364,4 @@ Etapa 2 del curso de Git · GitFlow · Material del instructor
 - **Por qué squash y no merge commit ni rebase merging:** comparación de las tres opciones en tres columnas.
 - **Rama reutilizada tras un squash:** por qué choca y cómo salir (rama nueva desde `main`).
 - **Atajos para adelantados:** `gh issue develop [número] --checkout`, `gh pr merge --squash --delete-branch`.
-- **Fuera de esta sesión:** `rebase -i`, `stash`, `cherry-pick`, `reflog`, tags y releases.
+- **Fuera de esta sesión:** `rebase -i`, `cherry-pick`, `reflog`, tags y releases (`stash` aparece como reto opcional del Autoestudio 2).
