@@ -144,7 +144,7 @@ Hasta ahora solo has visto el historial de tus propios proyectos. Ahora vas a ve
 
 > No necesitas hacer commits ni push aquí — es solo observación. Si quieres, elige tú mismo otro repositorio público pequeño que te llame la atención (de algún compañero, de una librería que uses, etc.) y repite el ejercicio con ese.
 
-> Los pasos 6 y 7 son solo para que tu ojo ya haya visto esas pantallas antes — Actions y Projects los vas a usar de verdad en la sesión avanzada.
+> Los pasos 6 y 7 son solo para que tu ojo ya haya visto esas pantallas antes — Actions y Projects los vas a usar de verdad en GitFlow (Etapa 2).
 
 **Pregunta para tu bitácora:** ¿el historial de un proyecto real se parece a lo que imaginabas, o es más desordenado/ordenado de lo que pensabas?
 
@@ -171,7 +171,7 @@ Todo lo que has hecho hasta ahora con clics en GitHub Desktop tiene un comando e
 4. Abre GitHub Desktop y confirma que el commit aparece ahí también, sin que hayas tocado ningún botón de la app.
 5. *(Opcional, si ya tienes GitHub CLI instalado)* corre `gh repo view` para ver info de tu repo desde la terminal, y `gh pr list` para ver tus pull requests sin abrir el navegador.
 
-**Lo que aprendiste:** GitHub Desktop no hace magia — cada botón corresponde a un comando. En la sesión avanzada vas a usar esos comandos directamente, sin la interfaz gráfica de por medio.
+**Lo que aprendiste:** GitHub Desktop no hace magia — cada botón corresponde a un comando. En GitFlow (Etapa 2) vas a usar esos comandos directamente, sin la interfaz gráfica de por medio.
 
 ---
 

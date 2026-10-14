@@ -2,13 +2,13 @@
 
 # Tarea: "Nuestras reglas del juego"
 
-Sesión 2 del curso de Git · En equipo · 4 horas
+Etapa 2 del curso de Git · GitFlow · En equipo · 4 horas
 
 <br>
 
-<img src="../assets/logos/git.webp" width="70" alt="Git" />
+<img src="../../assets/logos/git.webp" width="70" alt="Git" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="../assets/logos/github.png" width="70" alt="GitHub" />
+<img src="../../assets/logos/github.png" width="70" alt="GitHub" />
 
 </div>
 

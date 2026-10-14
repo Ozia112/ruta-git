@@ -2,13 +2,13 @@
 
 # Guion de clase: Git y GitHub en equipo, desde la terminal
 
-Sesión 2 del curso de Git · ~12 horas de clase, en varias jornadas · Material del instructor
+Etapa 2 del curso de Git · GitFlow · ~12 horas de clase, en varias jornadas · Material del instructor
 
 <br>
 
-<img src="../assets/logos/git.webp" width="70" alt="Git" />
+<img src="../../assets/logos/git.webp" width="70" alt="Git" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="../assets/logos/github.png" width="70" alt="GitHub" />
+<img src="../../assets/logos/github.png" width="70" alt="GitHub" />
 
 </div>
 
@@ -20,7 +20,7 @@ Sesión 2 del curso de Git · ~12 horas de clase, en varias jornadas · Material
 
 ## <font color="#179287">0. Filosofía del guion (léelo antes de dar la clase)</font>
 
-La lógica es la misma que en la Sesión 1: cada bloque abre una pregunta que **solo el siguiente bloque resuelve**. Repo local antes de repo compartido (primero se quita la interfaz, después se agregan personas); local vs. origin antes de cualquier rama de equipo (si no entienden que hay dos copias, nada de lo que sigue tiene sentido); issue antes de rama (el trabajo nace de una tarea, no de un impulso); flujo feliz antes de reglas (primero ven cómo *debería* ser, luego ven qué impide que alguien se lo salte); reglas antes de "el mundo siguió sin ti" (la regla de "rama al día" obliga a aprender `pull --rebase`); rebase limpio antes de rebase con conflicto; y al final, el ciclo completo **sin guía**.
+La lógica es la misma que en GitBasic: cada bloque abre una pregunta que **solo el siguiente bloque resuelve**. Repo local antes de repo compartido (primero se quita la interfaz, después se agregan personas); local vs. origin antes de cualquier rama de equipo (si no entienden que hay dos copias, nada de lo que sigue tiene sentido); issue antes de rama (el trabajo nace de una tarea, no de un impulso); flujo feliz antes de reglas (primero ven cómo *debería* ser, luego ven qué impide que alguien se lo salte); reglas antes de "el mundo siguió sin ti" (la regla de "rama al día" obliga a aprender `pull --rebase`); rebase limpio antes de rebase con conflicto; y al final, el ciclo completo **sin guía**.
 
 Cinco decisiones de diseño que conviene tener presentes:
 
@@ -64,15 +64,15 @@ Cinco decisiones de diseño que conviene tener presentes:
 
 **Del alumno (se pide con al menos una semana de anticipación):**
 
-1. Lo que ya tienen de la Sesión 1: cuenta de GitHub, Git instalado y GitHub Desktop con la cuenta vinculada. **No hay que configurar Git a mano:** al vincular la cuenta, GitHub Desktop ya dejó registrado su nombre y correo, y esa misma configuración es la que usará la terminal.
+1. Lo que ya tienen de GitBasic: cuenta de GitHub, Git instalado y GitHub Desktop con la cuenta vinculada. **No hay que configurar Git a mano:** al vincular la cuenta, GitHub Desktop ya dejó registrado su nombre y correo, y esa misma configuración es la que usará la terminal.
 2. **GitHub CLI** instalado (`gh --version` responde) y **autenticado** (`gh auth login` → GitHub.com → HTTPS → "Login with a web browser"). Si el alumno hizo el Reto 5 del autoestudio, ya tiene ventaja.
-3. VS Code con **GitLens** instalado, **sin iniciar sesión ni conectar nada**. Si GitLens muestra su página de bienvenida o invita a crear una cuenta, iniciar una prueba de Pro o conectar GitHub, se cierra y se ignora. La vista **Graph** que se usa en clase es la **nativa** del panel Source Control de VS Code, no la *Commit Graph* de GitLens. Si les quedó la extensión *Git Graph* de la Sesión 1, no estorba, pero en esta sesión se usa la vista nativa.
-4. Equipos de **3 o 4 personas** con un **líder** designado. Pueden ser los mismos de la Sesión 1.
+3. VS Code con **GitLens** instalado, **sin iniciar sesión ni conectar nada**. Si GitLens muestra su página de bienvenida o invita a crear una cuenta, iniciar una prueba de Pro o conectar GitHub, se cierra y se ignora. La vista **Graph** que se usa en clase es la **nativa** del panel Source Control de VS Code, no la *Commit Graph* de GitLens. Si les quedó la extensión *Git Graph* de GitBasic, no estorba, pero en esta sesión se usa la vista nativa.
+4. Equipos de **3 o 4 personas** con un **líder** designado. Pueden ser los mismos de GitBasic.
 
 **Del instructor:**
 
 1. Un repositorio de demostración propio para proyectar cada paso antes de que lo hagan los equipos.
-2. El **material de la sesión** (carpeta [`material/`](../material/) de este repositorio, ver Anexo), con el enlace enviado por correo antes de la clase. Contiene la guía del alumno, la tarea y la carpeta `plantillas-y-robot/` con la plantilla de issue, la plantilla de PR y la receta del robot. Los líderes copian esos tres archivos cuando la clase lo indica; nadie los escribe.
+2. El **material de la sesión** (carpeta [`2-gitflow/material/`](../material/) del repositorio del curso, ver Anexo), con el enlace enviado por correo antes de la clase. Contiene la guía del alumno, la tarea y la carpeta `plantillas-y-robot/` con la plantilla de issue, la plantilla de PR y la receta del robot. Los líderes copian esos tres archivos cuando la clase lo indica; nadie los escribe.
 3. Recordar a los líderes que su repo de equipo debe ser **público**: la protección de ramas es gratuita en repos públicos de cuentas personales; en repos privados requiere un plan de pago o una organización con GitHub Team.
 
 ---
@@ -86,7 +86,7 @@ Cinco decisiones de diseño que conviene tener presentes:
 **Guion:**
 
 1. (12 min) **Reconocimiento.** Cada alumno crea una carpeta vacía `practica-terminal` en el Escritorio con el Explorador de archivos (o Finder), la abre en VS Code (`File → Open Folder`) y abre la terminal integrada (`` Ctrl+` ``): la terminal ya está parada dentro de la carpeta. Primeros comandos, uno por uno, comentando qué responde cada uno: `git --version`, `gh auth status` y `git config user.name`. Este último responde con su nombre: *"eso lo dejó configurado GitHub Desktop cuando vincularon su cuenta. Desktop y la terminal usan el mismo Git."* Frase clave: *"La terminal no es más difícil, es más honesta: les dice exactamente lo que pasó."*
-2. (7 min) **Nace el repo.** `git init`. Activar los archivos ocultos (como en la Sesión 1) y señalar que apareció la carpeta `.git`. Frase clave: *"Esto es exactamente lo que hacía `File → New Repository` en Desktop. Un comando, y la carpeta ya está vigilada."* Si la terminal menciona que la rama se llama `master`, no pasa nada: en el Bloque 2 verán cómo GitHub propone llamarla `main`.
+2. (7 min) **Nace el repo.** `git init`. Activar los archivos ocultos (como en GitBasic) y señalar que apareció la carpeta `.git`. Frase clave: *"Esto es exactamente lo que hacía `File → New Repository` en Desktop. Un comando, y la carpeta ya está vigilada."* Si la terminal menciona que la rama se llama `master`, no pasa nada: en el Bloque 2 verán cómo GitHub propone llamarla `main`.
 3. (20 min) **El ciclo del commit, en texto.** En VS Code crean `notas.md` con un par de líneas en Markdown (qué esperan de esta sesión). Luego, leyendo en voz alta lo que responde cada comando:
    - `git status`: el archivo aparece en rojo, como *untracked*. *"Es el panel Changes de Desktop."*
    - `git add notas.md` y otra vez `git status`: ahora en verde. *"Es marcar la casilla."*
@@ -112,7 +112,7 @@ Cinco decisiones de diseño que conviene tener presentes:
 | Pull origin | `git pull` |
 | Create Pull Request | `gh pr create` |
 
-5. (12 min) **Repaso de la Sesión 1, sin botones.** `git switch -c prueba`, un cambio a `notas.md`, commit, `git switch main` (o `master`): el cambio desaparece del archivo; `git switch prueba`: reaparece. Abrir la vista **Graph** del panel Source Control de VS Code y ver la bifurcación, igual que la vieron en la Sesión 1.
+5. (12 min) **Repaso de GitBasic, sin botones.** `git switch -c prueba`, un cambio a `notas.md`, commit, `git switch main` (o `master`): el cambio desaparece del archivo; `git switch prueba`: reaparece. Abrir la vista **Graph** del panel Source Control de VS Code y ver la bifurcación, igual que la vieron en GitBasic.
 
 Frase de cierre: *"Este repo es solo suyo. No tiene nube, no tiene a nadie más. Y así se va a quedar: es su cuaderno de práctica."*
 
@@ -146,7 +146,7 @@ flowchart LR
    - `git push -u origin main`: *"subo main y dejo amarrada mi rama con la de origin."*
 
    Refrescar GitHub.com: aparecen el README **y** los commits del Bloque 1. Frase clave: *"No subió solo los archivos, subió la historia completa. Y fíjense qué no subió: la rama `prueba`. Solo sube lo que tú le dices."*
-3. (15 min) **Solo el líder, en GitHub.com:** `Settings → Collaborators → Add people` con cada compañero (ya lo conocen de la Sesión 1). Los compañeros aceptan la invitación en cuanto llegue, desde el correo o desde `github.com/notifications`.
+3. (15 min) **Solo el líder, en GitHub.com:** `Settings → Collaborators → Add people` con cada compañero (ya lo conocen de GitBasic). Los compañeros aceptan la invitación en cuanto llegue, desde el correo o desde `github.com/notifications`.
 4. (15 min) **El resto del equipo:** en la terminal, salir de su carpeta de práctica hacia el Escritorio (`cd ..`) y clonar: `gh repo clone lider/equipo-[nombre]`. Abrir la carpeta nueva en VS Code (`File → Open Folder`). Frase clave: *"Clonar es el único momento en el que no hacen `git init`: el repo ya existe, solo se lo traen."*
 5. (15 min) **Dos repos, dos realidades.** Todos, en su repo de equipo: `git remote -v`, que muestra la dirección de origin. Luego, quien no es líder vuelve un momento a su `practica-terminal` y corre lo mismo: **no responde nada**. *"Ese repo no tiene casa en internet, y está bien. origin no es una palabra mágica: es solo el apodo de una dirección, y un repo puede no tener ninguna."* De regreso en el repo del equipo: `git branch -a` muestra `main` y `remotes/origin/main`. Explicación central del bloque: **`main` es tu rama; `origin/main` es la foto que tu compu tiene de la rama `main` que vive en GitHub.** Son dos cosas distintas que a veces coinciden. Señalar las dos etiquetas sobre el mismo commit en la **Graph** de VS Code.
 6. (20 min) **La foto vieja.** El líder agrega una línea de bienvenida al `README.md`, `git add README.md`, `git commit -m "docs: bienvenida al equipo"`, `git push`. El resto corre `git status` y lee: *"Your branch is up to date with 'origin/main'"*. Pregunta al grupo: *"¿Es verdad?"*. **No lo es:** su foto de origin es vieja. Ahora `git fetch` y otra vez `git status`: *"Your branch is behind 'origin/main' by 1 commit"*. En la Graph, `origin/main` ya está un commit adelante de `main`. Por último `git pull`, y las dos etiquetas vuelven a juntarse.
@@ -305,7 +305,7 @@ gitGraph
 3. (12 min) **Ni el dueño.** El líder repite el truco del paso 1: commit directo en `main` y `git push`. Ahora la terminal responde con un rechazo (*"Repository rule violations"*, *"Changes must be made through a pull request"*). Frase clave: *"El líder es el administrador del repo y aun así no pudo. La regla no es para desconfiar de alguien, es para que nadie tenga que acordarse."*
 
    Para limpiar su `main` local, que ahora tiene un commit que origin nunca va a aceptar: `git reset --hard origin/main`. Traducción: *"haz que mi main sea exactamente igual a la foto de origin."* Advertencia en voz alta: este comando **tira** los cambios locales que no estén en origin; solo se usa cuando uno está seguro de que no los quiere.
-4. (20 min) **Contratar al robot.** El líder, en GitHub.com, pestaña **Actions → set up a workflow yourself**. GitHub propone un archivo dentro de `.github/workflows/`; el líder le pone de nombre `revision.yml`, borra el contenido de ejemplo y **pega la receta** del material del curso (`material/plantillas-y-robot/.github/workflows/revision.yml`, con *Copy raw file*). Explicación sin código: *"Esto es una receta. Cada vez que alguien abra un PR, GitHub va a prestar una computadora por unos segundos, va a seguir la receta y va a reportar el resultado en el PR. Esta receta revisa que nadie deje marcadores de conflicto olvidados. En equipos reales, la receta corre pruebas, revisa ortografía o publica la página."*
+4. (20 min) **Contratar al robot.** El líder, en GitHub.com, pestaña **Actions → set up a workflow yourself**. GitHub propone un archivo dentro de `.github/workflows/`; el líder le pone de nombre `revision.yml`, borra el contenido de ejemplo y **pega la receta** del material del curso (`2-gitflow/material/plantillas-y-robot/.github/workflows/revision.yml`, con *Copy raw file*). Explicación sin código: *"Esto es una receta. Cada vez que alguien abra un PR, GitHub va a prestar una computadora por unos segundos, va a seguir la receta y va a reportar el resultado en el PR. Esta receta revisa que nadie deje marcadores de conflicto olvidados. En equipos reales, la receta corre pruebas, revisa ortografía o publica la página."*
 
    Al guardar (**Commit changes**), GitHub ya no deja escribir directo en `main`: elegir **Create a new branch for this commit and start a pull request**. Ese mismo PR es la primera prueba del robot: en la parte de abajo aparece el check **Sin marcadores de conflicto** corriendo y luego en verde. Un compañero lo aprueba y el líder lo integra; el botón verde ahora dice **Squash and merge**, la única opción que dejaron. *"Hasta el robot tuvo que entrar por PR."* Desde la terminal también se puede consultar: `gh run list`.
 5. (12 min) **Hacer obligatorio al robot.** El líder vuelve al ruleset `proteger-main` → marca **Require status checks to pass** → **Add checks** → busca y agrega **Sin marcadores de conflicto** (ya aparece porque corrió una vez) → marca **Require branches to be up to date before merging** → **Save changes**. Traducir: "el robot tiene que dar el visto bueno" y "tu rama tiene que estar al día con main". En la terminal, todos: `git switch main` y `git pull` para traerse la receta.
@@ -370,7 +370,7 @@ flowchart TD
    | Subir una rama que reescribí (rebase o amend) | `git push --force-with-lease` | Sí, solo mi rama en origin |
    | Integrar mi trabajo a main | **Squash and merge** en el PR | No: agrega un solo commit a main |
    | Traer main a mi compu | `git pull` estando en main | No: siempre es fast-forward |
-   | Deshacer algo que ya está en main | `git revert` en una rama nueva + PR (el Revert de la Sesión 1) | No: agrega un commit que lo anula |
+   | Deshacer algo que ya está en main | `git revert` en una rama nueva + PR (el Revert de GitBasic) | No: agrega un commit que lo anula |
 
    Ya que lo entendieron, volverlo costumbre: `git config --global pull.rebase true`. A partir de aquí, cada `git pull` hace rebase en vez de merge. Es el único ajuste de configuración de la sesión, y se hace hasta que saben qué significa.
 
@@ -421,7 +421,7 @@ gitGraph
 2. (8 min) Se integra con **Squash and merge** el primer PR aprobado. Todos los demás quedan desactualizados, como en el Bloque 6. Pero esta vez GitHub dice algo nuevo en el PR: **"This branch has conflicts that must be resolved"**.
 3. (12 min) Todos, en su rama: `git pull --rebase origin main`. La terminal responde **CONFLICT** y se detiene a mitad del camino. `git status` explica exactamente dónde están parados: en medio de un rebase, con un archivo en conflicto, y les sugiere los comandos para seguir (`--continue`) o salir (`--abort`). Frase clave: *"Git no se rompió. Se detuvo a preguntarte algo que no puede decidir solo."*
 4. (30 min) **Resolver en VS Code.** El `README.md` aparece marcado en el panel Source Control. Al abrirlo se ven las marcas `<<<<<<<` / `=======` / `>>>>>>>` y los botones **Accept Current / Accept Incoming / Accept Both**, o el botón **Resolve in Merge Editor** para verlo en tres paneles.
-   - Explicar las marcas como en la Sesión 1: dos borradores del mismo párrafo.
+   - Explicar las marcas como en GitBasic: dos borradores del mismo párrafo.
    - **Aviso importante para el instructor:** durante un **rebase** las etiquetas se sienten al revés. *Current* es lo que **ya está en main** (la fila del compañero); *Incoming* es **tu commit** que se está volviendo a pegar. En este ejercicio da igual porque la respuesta correcta es **Accept Both**: queremos las dos filas. Dilo en voz alta antes de que alguien elija "Current" pensando que es lo suyo y borre su propia fila.
    - Revisar que la tabla quede bien (sin marcadores, una fila por persona) y guardar.
 5. (20 min) **Terminar el rebase desde la terminal:**
@@ -557,7 +557,7 @@ Proyectar [`material/tarea.md`](../material/tarea.md), que es el mismo documento
 - Recursos para la tarea y para seguir practicando: la ayuda de GitHub CLI desde la terminal (`gh help` y `gh [comando] --help`), la documentación de GitHub sobre flujos de trabajo, rulesets y métodos de merge, Pro Git en español (capítulos de ramas y de trabajo con remotos), y Oh My Git! para practicar rebase de forma visual.
 - Recordar que cada quien se lleva también su `practica-terminal`: un repo solo local, sin origin, donde pueden equivocarse sin consecuencias antes de probar algo en el repo del equipo.
 - Mensaje de despedida: *"Lo que aprendieron hoy no es Git, es trabajo en equipo. Git solo es la herramienta que lo deja por escrito, y ahora las reglas las ponen ustedes."*
-- Preguntas abiertas (si no alcanza el tiempo, se reciben como issues en este repositorio).
+- Preguntas abiertas (si no alcanza el tiempo, se reciben como issues en el repositorio del curso).
 
 ---
 
@@ -568,7 +568,7 @@ Proyectar [`material/tarea.md`](../material/tarea.md), que es el mismo documento
 - El Bloque 7 es el clímax: no lo recortes. Si el tiempo aprieta, recorta el Bloque 8: la tarea para casa obliga a repetir el ciclo completo sin guía.
 - **GitLens, solo lo gratuito y sin cuenta.** En la clase se usan únicamente **Current Line Blame** (autor al final de la línea), los **hovers** (tarjeta del commit), **CodeLens** (autores arriba del archivo), **File Blame** (anotación de todo el archivo) y **Open Commit on GitHub** (solo abre el navegador). Quedan fuera: *Commit Graph* de GitLens (se usa la Graph nativa de VS Code), *Explain* (IA, requiere cuenta de GitKraken), *Connect to GitHub* y *Launchpad* (integraciones que requieren cuenta), y los botones de acción del menú del commit (*Revert*, *Reset*, *Rebase*, *Switch to Commit*...), que sí funcionan pero harían por nosotros lo que en esta sesión se hace con comandos. Si un alumno los descubre, la respuesta es la misma idea que abrió la clase: *"ese botón también es un comando; hoy lo escribimos nosotros."*
 - **Etiquetas invertidas en rebase:** es el error más común de la sesión. Recuérdalo antes de que abran el editor de conflictos, no después.
-- Si alguien se pierde por completo en su copia del equipo, la salida más rápida y segura es la de la Sesión 1: borrar la carpeta y volver a clonar con `gh repo clone`. Todo lo que ya estaba en origin sigue ahí. (Esto **no** aplica al repo del líder del Bloque 1 si todavía no hizo push: ese es el único lugar donde vive su historia.)
+- Si alguien se pierde por completo en su copia del equipo, la salida más rápida y segura es la de GitBasic: borrar la carpeta y volver a clonar con `gh repo clone`. Todo lo que ya estaba en origin sigue ahí. (Esto **no** aplica al repo del líder del Bloque 1 si todavía no hizo push: ese es el único lugar donde vive su historia.)
 - **Por qué squash y no las otras dos opciones de GitHub:** *merge commit* agrega un nudo por PR (lo vieron en el Bloque 4); *rebase merging* deja la historia recta pero mete a main **todos** los commits pequeños de la rama, incluidos los *"ya ahora sí"*. Squash es la única que garantiza "un PR = un commit" sin exigirle al alumno que su rama esté impecable, y el detalle no se pierde porque vive en el PR. Si un alumno pregunta por rebase merging, la respuesta honesta es: sirve cuando cada commit de la rama vale la pena por sí solo, y eso exige una disciplina que se practica después.
 - **Rama reutilizada después de un squash:** si alguien sigue trabajando en una rama que ya se integró y abre otro PR, sus commits viejos reaparecen y suelen chocar. La regla "una rama, un PR" evita esto; si pasa, lo más limpio es crear una rama nueva desde `main` y llevarse solo el cambio nuevo.
 - Atajos que se pueden mencionar a quien vaya adelantado: `gh issue develop [número] --checkout` crea la rama ligada al issue y se cambia a ella en un solo paso; `gh pr merge --squash --delete-branch` integra el PR desde la terminal (una vez aprobado), borra la rama local y remota, y regresa a `main`.
@@ -578,7 +578,7 @@ Proyectar [`material/tarea.md`](../material/tarea.md), que es el mismo documento
 
 ## <font color="#179287">Anexo para el instructor: material de la sesión</font>
 
-El material del alumno vive en la carpeta [`material/`](../material/) de este repositorio, y el enlace se envía por correo antes de la clase. Además de la [guía del alumno](../material/guia-alumno.md) y la [tarea](../material/tarea.md), incluye la carpeta [`plantillas-y-robot/`](../material/plantillas-y-robot/) con los tres archivos de configuración que copian los equipos. Ninguno de esos tres archivos se proyecta completo ni se explica línea por línea: en clase solo se ve su efecto.
+El material del alumno vive en la carpeta [`2-gitflow/material/`](../material/) del repositorio del curso, y el enlace se envía por correo antes de la clase. Además de la [guía del alumno](../material/guia-alumno.md) y la [tarea](../material/tarea.md), incluye la carpeta [`plantillas-y-robot/`](../material/plantillas-y-robot/) con los tres archivos de configuración que copian los equipos. Ninguno de esos tres archivos se proyecta completo ni se explica línea por línea: en clase solo se ve su efecto.
 
 | Archivo | Qué hace | Quién lo copia y cuándo |
 |---|---|---|

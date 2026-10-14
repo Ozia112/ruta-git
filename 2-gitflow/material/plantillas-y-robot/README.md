@@ -2,13 +2,13 @@
 
 # Plantillas y robot
 
-Sesión 2 del curso de Git · Archivos de configuración para el repo del equipo
+Etapa 2 del curso de Git · GitFlow · Archivos de configuración para el repo del equipo
 
 <br>
 
-<img src="../../assets/logos/git.webp" width="70" alt="Git" />
+<img src="../../../assets/logos/git.webp" width="70" alt="Git" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="../../assets/logos/github.png" width="70" alt="GitHub" />
+<img src="../../../assets/logos/github.png" width="70" alt="GitHub" />
 
 </div>
 

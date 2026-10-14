@@ -2,13 +2,13 @@
 
 # Guía para armar las diapositivas
 
-Sesión 2 del curso de Git · Material del instructor
+Etapa 2 del curso de Git · GitFlow · Material del instructor
 
 <br>
 
-<img src="../assets/logos/git.webp" width="70" alt="Git" />
+<img src="../../assets/logos/git.webp" width="70" alt="Git" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="../assets/logos/github.png" width="70" alt="GitHub" />
+<img src="../../assets/logos/github.png" width="70" alt="GitHub" />
 
 </div>
 
@@ -25,7 +25,7 @@ Sesión 2 del curso de Git · Material del instructor
 - **Comandos en fuente monoespaciada y grandes.** Máximo 3 o 4 comandos por slide, cada uno con su traducción a lenguaje humano al lado.
 - **Estructura repetible por bloque:** portada de bloque (número, título, pregunta que abre) → slides de contenido → slide de frase clave o diagrama → slide de transición (la pregunta que abre el siguiente bloque).
 - **Pregunta de "¿dónde está esto?".** Conviene un icono o etiqueta fija de tres estados (💻 local / ☁️ origin / ambos) para reutilizar en las slides de comandos.
-- **Recursos visuales disponibles:** logos en [`assets/logos/`](../assets/logos/) (Git, GitHub, UADY). Los diagramas Mermaid del guion se pueden exportar tal cual (mermaid.live) o redibujar.
+- **Recursos visuales disponibles:** logos en [`assets/logos/`](../../assets/logos/) (Git, GitHub, UADY). Los diagramas Mermaid del guion se pueden exportar tal cual (mermaid.live) o redibujar.
 - **Slides "fijas":** la tabla de traducción (Bloque 1), el ritual (Bloque 4) y el acordeón (Bloque 8) deben poder quedarse proyectadas varios minutos mientras los alumnos trabajan: letra grande y sin animaciones.
 
 **Conteo estimado:** 45 a 55 diapositivas.
@@ -35,7 +35,7 @@ Sesión 2 del curso de Git · Material del instructor
 ## <font color="#F05032">Apertura (2 a 3 slides)</font>
 
 ### Slide 0.1: Portada
-- Título: *Git y GitHub en equipo, desde la terminal*. Subtítulo: Sesión 2 del curso de Git.
+- Título: *Git y GitHub en equipo, desde la terminal*. Subtítulo: Etapa 2 del curso de Git · GitFlow.
 - Logos de UADY, Git y GitHub. Nombre del instructor.
 
 ### Slide 0.2: Reglas del juego de hoy

@@ -2,13 +2,13 @@
 
 # Material del alumno
 
-Sesión 2 del curso de Git · Todo lo que necesitas durante la sesión y después de ella.
+Etapa 2 del curso de Git · GitFlow · Todo lo que necesitas durante la sesión y después de ella.
 
 <br>
 
-<img src="../assets/logos/git.webp" width="70" alt="Git" />
+<img src="../../assets/logos/git.webp" width="70" alt="Git" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="../assets/logos/github.png" width="70" alt="GitHub" />
+<img src="../../assets/logos/github.png" width="70" alt="GitHub" />
 
 </div>
 

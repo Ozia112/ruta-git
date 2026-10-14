@@ -2,13 +2,13 @@
 
 Comparación de las tres etapas del curso. GitFlow repasa a propósito lo que GitBasic hizo con botones, ahora en la terminal. La matriz separa ese repaso intencional de lo que solo se repite, señala qué pasa a actividades autodidactas, estima cuánto tiempo de actividad se ahorra y propone cómo repartir GitFlow en sesiones de 4 horas.
 
-| Etapa | Repositorio | Fuente revisada | Estado |
+| Etapa | Carpeta | Fuente revisada | Estado |
 |---|---|---|---|
-| **1. GitBasic** | `C:\dev\Repositories\GitBasic` | `propuesta contenido git/clase_git_guion_1_sesion_4h.md` (versión en disco, con cambios sin commit) | Guion de 250 min, sin calibrar con un grupo real |
-| **2. GitFlow** | `C:\dev\Repositories\GitFlowTrabajoColaborativo` | `guion/guion-instructor.md` | 740 min; Bloques 1 a 4 calibrados con el grupo de octubre de 2026 |
-| **3. AgenticFlow** | (por crear) | - | Tema nuevo, por desarrollar |
+| **1. GitBasic** | [`1-gitbasic/`](../1-gitbasic/) | [`guion/guion-instructor.md`](../1-gitbasic/guion/guion-instructor.md) y [`material/guia-alumno.md`](../1-gitbasic/material/guia-alumno.md) | Guion de 250 min, sin calibrar con un grupo real |
+| **2. GitFlow** | [`2-gitflow/`](../2-gitflow/) | [`guion/guion-instructor.md`](../2-gitflow/guion/guion-instructor.md) | 740 min; Bloques 1 a 4 calibrados con el grupo de octubre de 2026 |
+| **3. AgenticFlow** | [`3-agenticflow/`](../3-agenticflow/) | - | Tema nuevo, por desarrollar |
 
-> En GitBasic, el `README.md` del alumno todavía tiene la estructura vieja de 9 bloques y no coincide con el guion de 10 escenas. Para esta matriz se usó el guion. El guion de 2 sesiones (`clase_git_guion_2_sesiones_4h.md`) está borrado en el working tree y no se consideró.
+> GitBasic viene del `main` de [David-Alcocer/GitBasic](https://github.com/David-Alcocer/GitBasic), importado con su historial. Su guía del alumno ya sigue los 10 bloques del guion. El guion del instructor viene de la rama `propuesta-isaac` de ese repo, que `main` no tenía.
 
 ---
 
@@ -97,7 +97,7 @@ Autoestudio 2 = se practica fuera de clase (sección 4.1)
 | Convenciones de commits y ramas | | ● B4 | | |
 | Historia limpia: amend, rebase, squash | | ● B6 | | |
 | Automatización (GitHub Actions) | | ● B5 | | |
-| Estrategias de trabajo colaborativo | ○ `docs/flujos-git-colaborativos.md` (sin uso en el guion) | ● Cierre + tarea | | ⟳ material |
+| Estrategias de trabajo colaborativo | ○ lectura sin uso en su guion | ● Cierre + tarea + lectura de apoyo | | resuelto |
 | Terminal y GitHub CLI | ○ autoestudio, Reto 5 | ● toda la etapa | | |
 | IA en el trabajo | ○ pregunta del reto final | ○ se excluye GitLens *Explain* | ● | |
 
@@ -125,7 +125,7 @@ Los minutos son sobre el guion calibrado de GitFlow.
 | Revisión de PR | Comentario en línea + Approve | Es web en las dos etapas: una sola revisión por PR | ~5 min |
 | Actividad de perfil | Los comandos del ritual | Copiar el contenido de su `mi-perfil.md` de GitBasic en vez de escribirlo desde cero | ~15 min |
 | Conflictos | Todo el Bloque 7: rebase, etiquetas invertidas, robot | Las marcas `<<<<<<<` se recuerdan, no se vuelven a explicar | ~5 min |
-| Estrategias de trabajo colaborativo | Cierre + tarea | Mover `docs/flujos-git-colaborativos.md` (sin commit en GitBasic) a GitFlow como lectura de apoyo para la tarea | 0 (mejora la tarea) |
+| Estrategias de trabajo colaborativo | Cierre + tarea | **Hecho:** la lectura se movió a [`2-gitflow/material/lecturas/`](../2-gitflow/material/lecturas/flujos-git-colaborativos.md) como apoyo para la tarea | 0 (mejora la tarea) |
 
 **Ahorro estimado en GitFlow:** ~40 min, sin tocar ningún paso de práctica en terminal.
 
@@ -147,7 +147,7 @@ Con el criterio de "todo lo que se hizo con botones se vuelve a hacer en termina
 
 - **Dónde se practica:** en `practica-terminal`, el repo solo local que cada alumno crea en el Bloque 1 de GitFlow. Ahí equivocarse no cuesta nada y nadie más se ve afectado.
 - **Cuándo se deja:** desde el final del Bloque 1, porque ya existe `practica-terminal`. Así se practica la terminal entre clases, antes de los bloques de rebase.
-- **Relación con el Autoestudio 1:** el primero (`self-taught.md`, Reto 5: terminal y `gh`) es el puente de GitBasic a GitFlow. El segundo completa la traducción botón → comando de todo GitBasic.
+- **Relación con el Autoestudio 1:** el [primero](../1-gitbasic/material/autoestudio-1.md) practica con botones, en un repo desechable `sandbox-[tu-nombre]`, lo mismo que aquí falta: su Reto 3 (*Rómpelo y arréglalo*) cubre Discard, Undo, Revert y un conflicto, y su Reto 5 asoma a la terminal. El Autoestudio 2 puede repetir esas misiones, ahora con comandos, y seguir el mismo formato de bitácora.
 
 **Balance:** GitFlow conserva los ~40 min de ahorro sin agregar tiempo de clase.
 
@@ -187,9 +187,7 @@ Los autoestudios se dejan así: el 2 al final de la sesión 1 (ya existe `practi
 | Analogía de origin | Buzón: *fetch* es mirar el buzón | Foto: `origin/main` es la foto de GitHub | Elegir una para las dos etapas |
 | Vista del historial | Extensión **Git Graph** | **Graph nativa** de VS Code | Usar la Graph nativa desde GitBasic; una extensión menos que instalar |
 | Modelo de equipo | Fork + colaboradores en el fork | Repo compartido + colaboradores | Decidir si el fork se queda en GitBasic: aporta el `answers-box/` colectivo, pero mezcla dos modelos en la misma escena |
-| Vocabulario | El guion llama "Bloque 1" a toda la etapa y "Bloque 2" a GitFlow | "Sesión 2" para la etapa, "Bloque" para cada parte | Usar **Etapa** (GitBasic, GitFlow, AgenticFlow) > **Sesión** (una clase) > **Bloque** |
-| Autoestudio | El cierre remite a `self-taught.md` (Reto 5: terminal y `gh`) | El Acto 0 da ventaja a quien hizo el Reto 5; el Autoestudio 2 (sección 4.1) está por crear | El Autoestudio 1 no está en ninguno de los dos repos: ubicarlo o recrearlo, porque es el puente entre etapas y el Autoestudio 2 debería seguir su formato |
-| README del alumno | 9 bloques, sin historial ni deshacer | Coincide con el guion | Actualizar el README de GitBasic al guion de 10 escenas |
+| Vocabulario | El guion llamaba "Bloque 1" a toda la etapa | Llamaba "Sesión 2" a la etapa | **Hecho:** **Etapa** > **Sesión** (una clase) > **Bloque** en los README y encabezados |
 | Tiempos | 250 min sin medir | 3.3 veces lo planeado en los Bloques 1 a 4 | Medir GitBasic en su próxima impartición. Si se comporta parecido, tampoco cabe en 4 horas |
 
 ---

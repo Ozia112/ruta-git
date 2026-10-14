@@ -2,13 +2,13 @@
 
 # Guía del alumno: Git en equipo desde la terminal
 
-Sesión 2 del curso de Git · ~12 horas de clase, en varias jornadas
+Etapa 2 del curso de Git · GitFlow · ~12 horas de clase, en varias jornadas
 
 <br>
 
-<img src="../assets/logos/git.webp" width="70" alt="Git" />
+<img src="../../assets/logos/git.webp" width="70" alt="Git" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="../assets/logos/github.png" width="70" alt="GitHub" />
+<img src="../../assets/logos/github.png" width="70" alt="GitHub" />
 
 </div>
 
@@ -77,7 +77,7 @@ git config user.name # tu nombre: lo dejó configurado GitHub Desktop
 > En VS Code crea el archivo `notas.md` dentro de `practica-terminal` y escribe:
 
 ```markdown
-# Mis notas de la sesión 2
+# Mis notas de GitFlow
 
 ## Qué espero aprender hoy
 - 

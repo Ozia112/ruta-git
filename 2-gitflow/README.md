@@ -2,17 +2,17 @@
 
 # Git en equipo: trabajo colaborativo desde la terminal
 
-Sesión 2 del curso de Git · ~12 horas de clase, en varias jornadas. Desde aquí llegas a todo lo que necesitas: qué instalar antes de la clase, la guía que seguirás durante la sesión, el material, la tarea y los recursos para repasar por tu cuenta.
+Etapa 2 del curso de Git · GitFlow · ~12 horas de clase, en varias jornadas. Desde aquí llegas a todo lo que necesitas: qué instalar antes de la clase, la guía que seguirás durante la sesión, el material, la tarea y los recursos para repasar por tu cuenta.
 
 <br>
 
-<img src="assets/logos/git.webp" width="80" alt="Git" />
+<img src="../assets/logos/git.webp" width="80" alt="Git" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="assets/logos/github.png" width="80" alt="GitHub" />
+<img src="../assets/logos/github.png" width="80" alt="GitHub" />
 
 <br><br>
 
-<img src="assets/logos/uady.webp" width="80" alt="UADY" />
+<img src="../assets/logos/uady.webp" width="80" alt="UADY" />
 <br>
 <em>Facultad de Matemáticas de la UADY · Vinculación FMAT</em>
 
@@ -22,7 +22,7 @@ Sesión 2 del curso de Git · ~12 horas de clase, en varias jornadas. Desde aqu�
 
 ## <font color="#179287">De qué trata esta sesión</font>
 
-En la Sesión 1 aprendiste Git con botones. En esta dejamos los botones y trabajamos **en equipo, sobre un repositorio compartido, desde la terminal**. No vas a programar nada: todo lo que escribas será texto en Markdown.
+En GitBasic aprendiste Git con botones. En esta dejamos los botones y trabajamos **en equipo, sobre un repositorio compartido, desde la terminal**. No vas a programar nada: todo lo que escribas será texto en Markdown.
 
 Al terminar vas a poder:
 
@@ -36,13 +36,14 @@ Al terminar vas a poder:
 
 ---
 
-## <font color="#179287">Qué hay en este repositorio</font>
+## <font color="#179287">Qué hay en esta etapa</font>
 
 | Qué | Para quién | Dónde |
 |---|---|---|
 | **Guía del alumno**: los 8 bloques de la sesión, paso a paso, con sus actividades y el acordeón | Alumnos | [`material/guia-alumno.md`](material/guia-alumno.md) |
 | **Plantillas y robot**: plantillas de issue y de PR, y el robot revisor que copiará tu equipo | Alumnos | [`material/plantillas-y-robot/`](material/plantillas-y-robot/) |
 | **Tarea**: "Nuestras reglas del juego" | Alumnos | [`material/tarea.md`](material/tarea.md) |
+| **Lectura de apoyo**: flujos de trabajo colaborativos con Git, útil para la tarea | Alumnos | [`material/lecturas/flujos-git-colaborativos.md`](material/lecturas/flujos-git-colaborativos.md) |
 | **Guion**: el material guía del instructor, con tiempos, frases clave y notas | Instructores | [`guion/guion-instructor.md`](guion/guion-instructor.md) |
 | **Guía de diapositivas**: qué debe llevar la presentación en cada bloque | Instructores | [`guion/guia-slides.md`](guion/guia-slides.md) |
 
@@ -50,8 +51,9 @@ Al terminar vas a poder:
 
 | Término | Qué es |
 |---|---|
-| **Sesión** | Una unidad del curso con su propio tema; puede ocupar varias clases. Este repositorio cubre la Sesión 2 (~12 horas de clase) |
-| **Bloque** | Cada parte de la sesión donde se explica y practica un concepto principal. La sesión tiene 8 |
+| **Etapa** | Una parte del curso con su propio tema: GitBasic, GitFlow y AgenticFlow. Esta es la Etapa 2 (~12 horas de clase) |
+| **Sesión** | Una clase. Una etapa puede ocupar varias sesiones |
+| **Bloque** | Cada parte de la etapa donde se explica y practica un concepto principal. Esta etapa tiene 8 |
 | **Guion** | El material guía del instructor |
 | **Guía del alumno** | Lo que tú sigues durante la sesión, bloque por bloque |
 
@@ -59,7 +61,7 @@ Al terminar vas a poder:
 
 ## <font color="#179287">Antes de la clase</font>
 
-De la Sesión 1 ya tienes cuenta de GitHub, Git instalado y GitHub Desktop con tu cuenta vinculada. **No necesitas configurar Git a mano**: GitHub Desktop ya dejó registrados tu nombre y tu correo, y la terminal usa esa misma configuración.
+De GitBasic ya tienes cuenta de GitHub, Git instalado y GitHub Desktop con tu cuenta vinculada. **No necesitas configurar Git a mano**: GitHub Desktop ya dejó registrados tu nombre y tu correo, y la terminal usa esa misma configuración.
 
 | Herramienta | Enlace |
 |---|---|
@@ -69,7 +71,7 @@ De la Sesión 1 ya tienes cuenta de GitHub, Git instalado y GitHub Desktop con t
 
 ### Instalar Git y GitHub CLI desde la terminal
 
-Si ya tienes Git de la Sesión 1, el comando lo detecta y solo instala lo que falta. Elige tu sistema operativo:
+Si ya tienes Git de GitBasic, el comando lo detecta y solo instala lo que falta. Elige tu sistema operativo:
 
 **Windows** (PowerShell o Terminal):
 
