@@ -117,7 +117,7 @@ gh auth status      # debe decir que tienes sesión en github.com
 | Requisito | Por qué | Si no lo tienen |
 |---|---|---|
 | Un equipo de **3 o 4 personas** | Es el tamaño con el que se diseñaron las actividades | Pueden ser los mismos de GitBasic. Si alguien se queda sin equipo, avísenle al instructor antes de la clase |
-| Un **líder** | Su repo de práctica se convierte en el repo del equipo, y es quien configura las reglas en GitHub.com | Decídanlo antes de la clase. Conviene que sea quien tenga la instalación más confiable |
+| Un **líder** | Su repo de práctica se convierte en el repo del equipo, y es quien configura las reglas en GitHub.com: solo el dueño del repo puede hacerlo | Decídanlo antes de la clase. Conviene que sea quien tenga la instalación más confiable **y quien pueda asistir a todas las sesiones**, que son en días distintos. Si sabe que faltará a una, que avise antes |
 | El **usuario de GitHub** de cada integrante | El líder los invita como colaboradores en el Bloque 2 | Compártanlo en el chat del equipo |
 
 **Opcional, pero da ventaja:** el [Reto 5 del Autoestudio 1](../../1-gitbasic/material/autoestudio-1.md#reto-5-opcional--asómate-a-la-terminal-y-a-github-cli) de GitBasic, que te asoma a la terminal antes de llegar.
