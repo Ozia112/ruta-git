@@ -1,0 +1,3 @@
+# Los scripts de comprobación se copian a repos de alumnos y corren en Git Bash:
+# con CRLF fallan con errores como $'\r': command not found.
+*.sh text eol=lf
