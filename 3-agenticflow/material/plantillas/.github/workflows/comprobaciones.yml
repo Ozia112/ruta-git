@@ -1,0 +1,20 @@
+name: Comprobaciones
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  comprobaciones:
+    name: Comprobaciones del equipo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: La página cumple su especificación (ESP-01)
+        run: sh pruebas/verificar-sitio.sh
+      - name: Los enlaces de la documentación llevan a algo que existe
+        run: sh pruebas/verificar-enlaces.sh
+      # Cuando su proyecto tenga más pruebas, agréguenlas aquí como otro paso.
+      # Por ejemplo:
+      # - name: Pruebas del proyecto
+      #   run: [el comando que corre sus pruebas]
