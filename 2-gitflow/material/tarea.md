@@ -33,6 +33,8 @@ En clase trabajamos con **una** forma de colaborar en un repositorio. No es la �
 4. **Documentarlo** en su repositorio, en `docs/soporte/workflow_y_politicas_de_trabajo_colaborativo.md`.
 5. **Grabar un video** con diapositivas donde expliquen el documento.
 
+> Guárdenlo bien: en la Etapa 3, [AgenticFlow](../../3-agenticflow/README.md), este documento es el punto de partida de las instrucciones que le escribirán a un agente de IA, y esta idea de proyecto es la que construirán con él y desplegarán.
+
 ---
 
 ## <font color="#179287">Contenido mínimo del documento</font>

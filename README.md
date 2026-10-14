@@ -28,9 +28,11 @@ Cada etapa se apoya en la anterior. Empieza por la primera que no hayas tomado.
 |---|---|---|---|---|---|
 | 1 | **GitBasic** | Qué es Git, tu primer repo, ramas, push y pull, tu primer Pull Request y tu primer conflicto | GitHub Desktop | 1 sesión de 4 h | [1-gitbasic](1-gitbasic/README.md) |
 | 2 | **GitFlow** | Lo mismo, ahora en la terminal y en equipo: issues, Pull Requests revisados, reglas del repo, historia limpia y conflictos | Terminal (`git` y `gh`) | ~12 h de clase | [2-gitflow](2-gitflow/README.md) |
-| 3 | **AgenticFlow** | En desarrollo | Por definir | Por definir | [3-agenticflow](3-agenticflow/README.md) |
+| 3 | **AgenticFlow** | Construir software de calidad con un agente: documentar, revisar, implementar, revisar, probar, revisar y desplegar, con GitFlow poniendo orden | El agente de código que tengas + `AGENTS.md` | 1 sesión de 4 h + 2 autoestudios y un proyecto final desplegado | [3-agenticflow](3-agenticflow/README.md) |
 
-Entre una etapa y la siguiente hay un **autoestudio** para practicar por tu cuenta. El primero, al final de GitBasic, te asoma a la terminal antes de llegar a GitFlow.
+Entre una etapa y la siguiente hay un **autoestudio** para practicar por tu cuenta. El primero, al final de GitBasic, te asoma a la terminal antes de llegar a GitFlow. En AgenticFlow, los autoestudios 4 y 5 continúan lo que empieza en la sesión.
+
+Al terminar AgenticFlow, cada equipo presenta su proyecto **construido y desplegado** a un grupo de ingenieros egresados y con experiencia en el sector, que les dan mentoría, consejos y respuestas a sus dudas. Esa etapa está en diseño.
 
 ---
 
