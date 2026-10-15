@@ -75,7 +75,7 @@ La lógica interna es la de las etapas anteriores: cada bloque abre una pregunta
 **Del alumno (se pide con al menos una semana de anticipación):**
 
 1. El **repositorio del equipo de GitFlow** al día, con `integrantes/` (un perfil por persona), las plantillas de issue y PR, el robot y las reglas de `main`.
-2. **Al menos un agente por equipo**, instalado, con la sesión iniciada y probado **dentro del repo del equipo** (que responda con los archivos reales a *"¿Qué archivos hay en este repositorio?"*). Los [requisitos previos](../material/requisitos.md) comparan opciones gratuitas, económicas y estándar, y dicen cómo instalar cada una. Envíalos con al menos una semana de anticipación: el beneficio de estudiante de GitHub puede tardar días en activarse.
+2. **Al menos un agente por equipo**, instalado, con la sesión iniciada y probado **dentro del repo del equipo** (que responda con los archivos reales a *"¿Qué archivos hay en este repositorio?"*). Los [requisitos previos](../material/requisitos.md) dicen cómo instalar OpenCode, el agente del curso, y qué hacer si no arranca (Copilot Free como respaldo). Envíalos con al menos una semana de anticipación: el beneficio de estudiante de GitHub puede tardar días en activarse.
 3. Los **papeles** decididos: piloto (quien tiene el agente), revisor, probador y líder. En equipos de tres, el líder es también el probador y la Revisión 3 la hace el revisor.
 4. En Windows, saber abrir una terminal **Git Bash** en VS Code.
 5. El documento de la tarea de GitFlow a la mano (`docs/soporte/workflow_y_politicas_de_trabajo_colaborativo.md`).
