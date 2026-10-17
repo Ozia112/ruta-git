@@ -84,8 +84,8 @@ Al terminar vas a poder:
 - [ ] **VS Code**, con una terminal **Git Bash** si usas Windows. El curso se da en VS Code: cualquier otro editor es bajo tu propio riesgo.
 - [ ] **Git, GitHub y GitHub CLI** funcionando, con tu sesión iniciada.
 - [ ] **El repositorio del equipo de GitFlow, completo:** público, con todos como colaboradores, un perfil por integrante en `integrantes/`, las plantillas, el robot, las reglas de `main` y el documento "Nuestras reglas del juego". Si algo quedó pendiente en GitFlow, los requisitos dicen cómo dejarlo listo.
-- [ ] **Un agente de código en VS Code**: al menos el piloto, idealmente todos. Los requisitos comparan opciones gratuitas, económicas y estándar, y dicen cómo instalar cada una.
-- [ ] **La solicitud del beneficio de estudiante de GitHub**, enviada: puede tardar días en activarse.
+- [ ] **OpenCode funcionando en la terminal**: al menos el piloto, idealmente todos. Respaldo: **Copilot Free** en VS Code. Los requisitos dicen cómo instalar cada uno.
+- [ ] **(Opcional) La solicitud del beneficio de estudiante de GitHub**: si la mandas, puede tardar días en activarse.
 - [ ] **Los papeles del equipo** decididos: piloto, revisor, probador y líder.
 
 > Si tu equipo no tiene agente o no logra hacerlo funcionar, avisa al instructor **antes** de la clase. Pueden escribir los documentos, revisar y probar de todas formas, y trabajar con el agente de otro equipo en los pasos que lo necesitan.

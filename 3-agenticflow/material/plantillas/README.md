@@ -44,7 +44,7 @@ Todas se vuelven a usar en el [proyecto final](../proyecto-final.md). Las planti
 
 `AGENTS.md` es un formato abierto que leen la mayoría de los agentes de código ([agents.md](https://agents.md)). **El que manda es siempre `AGENTS.md`**: si tu agente necesita otro archivo, ese otro archivo solo apunta a `AGENTS.md` y no repite nada.
 
-Cómo lo lee cada agente, y qué hacer si no lo lee solo, está en los [requisitos previos](../requisitos.md#42-cómo-instalar-cada-uno), junto con su instalación. Vive en un solo lugar para que no se desactualice en dos.
+Cómo lo lee cada agente, y qué hacer si no lo lee solo, está en los [requisitos previos](../requisitos.md#42-cómo-instalarlo), junto con su instalación. Vive en un solo lugar para que no se desactualice en dos.
 
 > Para comprobar que tu agente leyó `AGENTS.md`, pregúntale algo que solo diga ese archivo: *"¿Qué carpeta no puedes tocar en este repositorio?"*.
 

@@ -154,7 +154,7 @@ El experimento queda guardado en tu rama local y `main` sigue limpio.
 
 ### <font color="#F05032">Bloque 2 — El recetario de la casa: `AGENTS.md` *(equipo · Documentar)*</font>
 
-**Qué es:** todo lo que el agente decidió solo en el Bloque 1 lo decidió porque no estaba escrito. `AGENTS.md` es el archivo que el agente lee **cada vez que llega**, antes de hacer nada: el recetario pegado en la pared de la cocina. Lo leen la mayoría de los agentes de código; si el tuyo necesita algo más, está en los [requisitos previos](requisitos.md#42-cómo-instalar-cada-uno).
+**Qué es:** todo lo que el agente decidió solo en el Bloque 1 lo decidió porque no estaba escrito. `AGENTS.md` es el archivo que el agente lee **cada vez que llega**, antes de hacer nada: el recetario pegado en la pared de la cocina. Lo leen la mayoría de los agentes de código; si el tuyo necesita algo más, está en los [requisitos previos](requisitos.md#42-cómo-instalarlo).
 
 Como en GitFlow: **la configuración es un archivo**, viaja con el repo y entra por Pull Request como cualquier otro cambio.
 
@@ -202,7 +202,7 @@ git switch -c feature/[número]-documentacion
 
 **Antes de dar una línea por buena, pregúntense: ¿cómo lo sé?** Si nadie puede señalar el archivo o la regla que la respalda, la línea no va.
 
-> Si tu agente necesita otro archivo además de `AGENTS.md` (por ejemplo, si tu equipo ya tenía un `CLAUDE.md`), créalo o ajústalo en este mismo paso con una sola línea que apunte a `AGENTS.md`. Cómo hacerlo con cada agente está en los [requisitos previos](requisitos.md#42-cómo-instalar-cada-uno).
+> Si tu agente necesita otro archivo además de `AGENTS.md` (por ejemplo, si tu equipo ya tenía un `CLAUDE.md`), créalo o ajústalo en este mismo paso con una sola línea que apunte a `AGENTS.md`. Cómo hacerlo con cada agente está en los [requisitos previos](requisitos.md#42-cómo-instalarlo).
 
 ---
 
@@ -626,7 +626,7 @@ Un riesgo se mitiga en el momento más temprano en que cuesta poco: antes de esc
 
 | Problema | Solución |
 |---|---|
-| El agente no sigue `AGENTS.md` | Pregúntale algo que solo diga ese archivo (*"¿qué carpeta no puedes tocar?"*). Si no lo sabe, no lo está leyendo: revisa el nombre del archivo y lo que dicen los [requisitos previos](requisitos.md#42-cómo-instalar-cada-uno) sobre tu agente |
+| El agente no sigue `AGENTS.md` | Pregúntale algo que solo diga ese archivo (*"¿qué carpeta no puedes tocar?"*). Si no lo sabe, no lo está leyendo: revisa el nombre del archivo y lo que dicen los [requisitos previos](requisitos.md#42-cómo-instalarlo) sobre tu agente |
 | `sh: command not found` o `sh` no se reconoce | Estás en PowerShell. Abre una terminal **Git Bash** |
 | La comprobación falla con `$'\r': command not found` | El `.sh` se guardó con CRLF. En VS Code, clic en **CRLF** (barra inferior) → **LF**, guardar |
 | El agente quiere hacer `git push` o trabajar en `main` | Recházalo. De todas formas, las reglas del repo que configuraron en GitFlow lo impedirían |

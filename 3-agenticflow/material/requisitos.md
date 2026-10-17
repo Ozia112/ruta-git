@@ -30,8 +30,8 @@ Los planes y precios de este documento se revisaron el **14 de octubre de 2026**
 | 2 | Git con tu nombre y correo, GitHub CLI con sesión iniciada | Cada quien | [2](#2-git-github-y-github-cli) |
 | 3 | El repositorio del equipo de GitFlow, completo y con sus reglas | El líder, con el equipo | [3](#3-el-repositorio-del-equipo-lo-que-dejó-gitflow) |
 | 4 | Tu copia del repo del equipo, al día | Cada quien | [3](#3-el-repositorio-del-equipo-lo-que-dejó-gitflow) |
-| 5 | Un agente de código funcionando en VS Code: al menos el piloto, idealmente todos | Cada quien | [4](#4-un-agente-de-código) |
-| 6 | La solicitud del beneficio de estudiante de GitHub, enviada | Cada quien | [5](#5-programas-para-estudiantes) |
+| 5 | OpenCode funcionando en la terminal, con Copilot Free como respaldo: al menos el piloto, idealmente todos | Cada quien | [4](#4-un-agente-de-código) |
+| 6 | (Opcional) La solicitud del beneficio de estudiante de GitHub, enviada | Cada quien | [5](#5-programas-para-estudiantes) |
 | 7 | Los papeles del equipo decididos: piloto, revisor, probador y líder | El equipo | [6](#6-la-comprobación-final) |
 
 ---
@@ -157,116 +157,25 @@ Si su equipo no entregó "Nuestras reglas del juego", creen `docs/soporte/workfl
 
 ## <font color="#179287">4. Un agente de código</font>
 
-**Qué necesita el curso de un agente:** que funcione **dentro de VS Code** (en el panel de chat o en la terminal integrada), que pueda **leer y cambiar los archivos del repo**, que **ejecute comandos pidiéndote permiso** y, de preferencia, que lea `AGENTS.md`.
+**Qué necesita el curso de un agente:** que corra en la **terminal**, que pueda **leer y cambiar los archivos del repo**, que **ejecute comandos pidiéndote permiso** y que lea `AGENTS.md`.
 
-**Mínimo:** al menos una persona por equipo, el **piloto**, con un agente funcionando. **Ideal:** todos, para turnarse y para tener respaldo si a alguien se le acaba la cuota a media clase.
+**Mínimo:** al menos una persona por equipo, el **piloto**, con OpenCode funcionando. **Ideal:** todos, para turnarse y para tener respaldo si a alguien se le acaba la cuota a media clase.
 
-### 4.1 Las opciones, de gratis a estándar
+### 4.1 El agente del curso: OpenCode
 
-Precios en dólares estadounidenses, sin impuestos; con tarjeta mexicana el cargo aparece en pesos y puede incluir IVA.
+**OpenCode** es el agente del curso: código abierto, corre en la terminal, lee `AGENTS.md` de forma nativa y **te obliga a configurar permisos** antes de dejarlo tocar nada — justo la lección de esta etapa: *lo que el agente ejecuta, lo firmas tú*. Usa sus propios modelos gratuitos (cambian seguido) o la suscripción que ya tengas de Copilot o de ChatGPT Plus.
 
-| Nivel | Agente y plan | Costo | En VS Code | ¿Listo para el sábado? | Para qué alcanza |
-|---|---|---|---|---|---|
-| **Gratis** | **GitHub Copilot Free** | $0 | Viene en VS Code | **Sí**, en minutos | La sesión, con cuidado: el uso de chat y agente es limitado (las preguntas frecuentes de GitHub hablan de 50 solicitudes al mes). No alcanza para el proyecto final |
-| **Gratis** | **GitHub Copilot Student** | $0 para estudiantes verificados | Viene en VS Code | **Quizá:** depende de la verificación (sección 5). Pídelo hoy | La sesión y los autoestudios: sugerencias de código ilimitadas y 200 créditos de IA al mes. El modelo lo elige Copilot automáticamente |
-| **Gratis** | **Google Antigravity** (cuenta personal de Google) | $0 con cuota limitada | Extensión *Google Antigravity* o terminal (`agy`) | **Sí**, en minutos | La sesión, si la cuota alcanza: Google no publica claramente el límite gratuito y ha cambiado varias veces |
-| **Gratis** | **Kilo Code** con modelos gratuitos | $0 | Extensión *Kilo Code* | **Sí**, en minutos | La sesión, con modelos menos capaces que los de pago y límites de uso. Ojo con la privacidad (abajo) |
-| **Gratis** | **OpenCode** (código abierto) con sus modelos gratuitos, o con tu suscripción de Copilot o ChatGPT Plus | $0, o lo que ya pagas | Terminal integrada (`opencode`) y su extensión | **Sí**, si lo instalas y configuras antes: en Windows pide Node.js y **un ajuste obligatorio de permisos** | La sesión con modelos gratuitos, que cambian seguido; todo el curso si lo conectas a un plan de pago |
-| **Económico** | **GitHub Copilot Pro** | $10 al mes | Viene en VS Code | **Sí**, al pagar | Los autoestudios y el proyecto final, con uso moderado |
-| **Económico** | **Kilo Code** pagando por uso | Lo que consumas | Extensión *Kilo Code* | **Sí**, al agregar saldo | Tú controlas el gasto: compras créditos de Kilo o usas tu propia clave de API, y pagas solo lo que el agente consume |
-| **Estándar** | **Claude Code** con Claude Pro | $20 al mes, o $17 al mes pagando el año ($200) | Extensión *Claude Code* y terminal (`claude`) | **Sí**, al pagar | Todo: sesión, autoestudios y proyecto final |
-| **Estándar** | **OpenAI Codex** con ChatGPT Plus | $20 al mes | Extensión *Codex* y terminal (`codex`) | **Sí**, al pagar | Todo. Los planes Free y Go de ChatGPT **no** incluyen Codex en VS Code ni en la terminal |
-| **Estándar** | **Google Antigravity** con Google AI Pro | $19.99 al mes | Extensión *Google Antigravity* y terminal (`agy`) | **Sí**, al pagar | Más cuota que la gratuita |
+**¿Ya lo tienes?** En la terminal:
 
-> **No sigas tutoriales viejos de estas dos:** el plan gratuito de **Gemini Code Assist** y el acceso a **Gemini CLI** con *Login with Google* dejaron de funcionar el 18 de junio de 2026 (Google recomienda pasar a Antigravity). **Amazon Q Developer** está en retiro: según varios reportes, ya no acepta cuentas gratuitas nuevas y sus extensiones dejan de tener soporte en abril de 2027.
+```bash
+opencode --version
+```
 
-**Nuestra recomendación para el sábado:**
+Si responde con una versión, ve directo a comprobar el permiso (4.2, paso 5). Si no, instálalo con los pasos de abajo.
 
-1. **Todos:** activa hoy **Copilot Free** en VS Code (4.2). Es tu respaldo y tarda cinco minutos.
-2. **Todos:** solicita hoy el **beneficio de estudiante de GitHub** (sección 5). Si se activa, tu Copilot Free se convierte en Copilot Student sin que reinstales nada.
-3. **El piloto de cada equipo:** si puede, que use un plan **estándar** o Copilot Student ya activo; con el Free, la cuota se puede acabar a media clase.
-4. **No gastes la cuota antes de la clase:** después de la prueba de la sección 4.3, deja de usar el agente hasta el sábado.
+> **¿Ya pagas otro agente de terminal (Claude Code, Codex, Antigravity)?** Puedes usarlo bajo tu propio riesgo, si lee `AGENTS.md` y pasa la prueba de 4.4. En clase no resolvemos problemas de instalación de agentes fuera de OpenCode.
 
-### 4.2 Cómo instalar cada uno
-
-#### GitHub Copilot (Free, Student o Pro)
-
-1. Actualiza VS Code. Las funciones de IA ya vienen incluidas.
-2. Pasa el mouse sobre el ícono de Copilot en la barra inferior y elige **Use AI Features**. Inicia sesión **con la misma cuenta de GitHub del curso**.
-3. Si tu cuenta no tiene plan, quedas en **Copilot Free** automáticamente. Si ya tienes Student o Pro, se usa ese.
-4. Abre la vista de **Chat** y elige el modo que puede editar archivos y ejecutar comandos (el **agente**), no el de solo preguntas.
-5. **`AGENTS.md`:** en **Settings** busca `chat.useAgentsMdFile` y confirma que esté activado.
-6. **Privacidad (opcional):** en la versión gratuita la telemetría está activa. Para apagarla: **Settings** → `telemetry.telemetryLevel` → `off`.
-
-Para pasar a **Pro** ($10 al mes): [github.com/features/copilot/plans](https://github.com/features/copilot/plans).
-
-#### Claude Code (requiere Claude Pro o superior)
-
-1. Contrata **Claude Pro** en [claude.com/pricing](https://claude.com/pricing). El plan gratuito de Claude **no** incluye Claude Code.
-2. Instala el programa, en la terminal de tu sistema:
-
-   ```bash
-   # Windows (PowerShell)
-   irm https://claude.ai/install.ps1 | iex
-
-   # Windows (alternativa con winget)
-   winget install Anthropic.ClaudeCode
-
-   # macOS y Linux
-   curl -fsSL https://claude.ai/install.sh | bash
-   ```
-
-3. Abre una terminal nueva y comprueba: `claude --version`.
-4. En VS Code: **Extensions** → buscar **Claude Code** (de Anthropic) → **Install**.
-5. Abre la carpeta del repo del equipo y ejecuta `claude` en la terminal integrada (o abre el panel de la extensión). La primera vez te pide iniciar sesión en el navegador.
-6. **`AGENTS.md`:** Claude Code lo lee directamente si en el repo **no** hay un `CLAUDE.md` (desde la versión 2.1.277; el instalador nativo se actualiza solo). Si tu equipo ya tiene un `CLAUDE.md`, escribe en él una sola línea: `@AGENTS.md`.
-7. **Windows:** Git for Windows (sección 2) es lo que le permite usar Git Bash. No necesitas instalar nada más.
-
-#### OpenAI Codex (requiere ChatGPT Plus o superior)
-
-1. Contrata **ChatGPT Plus**. Los planes Free y Go no incluyen Codex en la terminal ni en VS Code.
-2. En VS Code: **Extensions** → buscar **Codex** (de OpenAI) → **Install** → **Sign in with ChatGPT**.
-3. *(Opcional)* La versión de terminal:
-
-   ```bash
-   # Windows (PowerShell)
-   powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"
-
-   # macOS y Linux
-   curl -fsSL https://chatgpt.com/codex/install.sh | sh
-   ```
-
-   Ejecuta `codex` dentro de la carpeta del repo y elige **Sign in with ChatGPT**.
-4. **`AGENTS.md`:** lo lee directamente.
-
-#### Google Antigravity (gratis con cuota, o con Google AI Pro)
-
-1. En VS Code: **Extensions** → buscar **Google Antigravity** → **Install** → inicia sesión con tu **cuenta personal de Google**.
-2. *(Opcional)* La versión de terminal:
-
-   ```bash
-   # Windows (PowerShell)
-   irm https://antigravity.google/cli/install.ps1 | iex
-
-   # macOS y Linux
-   curl -fsSL https://antigravity.google/cli/install.sh | bash
-   ```
-
-   Ejecuta `agy` dentro de la carpeta del repo y sigue el inicio de sesión en el navegador.
-3. **`AGENTS.md`:** las guías de uso indican que lo lee; compruébalo con la pregunta de la sección 4.3.
-4. **No uses el IDE de Antigravity** (un editor aparte): en el curso usamos la extensión dentro de VS Code.
-
-#### Kilo Code (gratis con modelos gratuitos, o pagando por uso)
-
-1. En VS Code: **Extensions** → buscar **Kilo Code** → **Install**.
-2. Crea tu cuenta gratuita de Kilo cuando la extensión te lo pida.
-3. Elige el modelo **Auto Free** (o cualquiera marcado como *Free*). Según Kilo, los modelos gratuitos no requieren tarjeta.
-4. **Privacidad:** Kilo advierte que *Auto Free* puede enviar tus mensajes a proveedores que los guardan y los usan para mejorar sus servicios. **No escribas nada personal ni confidencial**; para el repo del equipo, que es público, no es un problema.
-5. **`AGENTS.md`:** su documentación no lo confirma; compruébalo con la pregunta de la sección 4.3. Si no lo lee, empieza cada conversación con *"Lee AGENTS.md antes de hacer cualquier cosa"*.
-
-#### OpenCode (código abierto: gratis con sus modelos gratuitos, o con tu suscripción)
-
-OpenCode es un agente de código abierto que corre en la terminal integrada de VS Code. Puede usar sus propios modelos gratuitos o la suscripción que ya tengas de Copilot o de ChatGPT Plus.
+### 4.2 Cómo instalarlo
 
 1. Instálalo:
 
@@ -279,7 +188,7 @@ OpenCode es un agente de código abierto que corre en la terminal integrada de V
    curl -fsSL https://opencode.ai/install | bash
    ```
 
-   > En Windows, OpenCode dice que la mejor experiencia es con WSL. La instalación de arriba funciona sin WSL; si algo falla, usa otra opción de esta sección en lugar de pelear con la instalación antes de la clase.
+   > En Windows, OpenCode dice que la mejor experiencia es con WSL. La instalación de arriba funciona sin WSL; si algo falla, cae al respaldo (4.3) en vez de pelear con la instalación antes de la clase.
 
 2. **Antes de usarlo, haz que pida permiso. Es obligatorio en el curso.** Por omisión, OpenCode edita archivos y ejecuta comandos **sin preguntar**. Crea el archivo de configuración global `~/.config/opencode/opencode.json` (en Windows, `C:\Users\TU-USUARIO\.config\opencode\opencode.json`) con este contenido:
 
@@ -293,20 +202,24 @@ OpenCode es un agente de código abierto que corre en la terminal integrada de V
    }
    ```
 
-3. En VS Code, abre la carpeta del repo del equipo y ejecuta `opencode` en la terminal integrada. La extensión de VS Code se instala sola la primera vez.
-4. Conecta un modelo con `/connect`:
-   - **OpenCode:** crea tu cuenta en opencode.ai. Algunos modelos son gratuitos por tiempo limitado; la lista cambia seguido (revísala con `/models`).
-   - **GitHub Copilot:** usa tu plan Free, Student o Pro. Algunos modelos pueden pedir un plan superior.
-   - **OpenAI:** elige la opción de ChatGPT Plus/Pro e inicia sesión en el navegador.
+3. En la terminal, abre la carpeta del repo del equipo y ejecuta `opencode`. Si trabajas desde VS Code, su extensión se instala sola la primera vez.
+4. Conecta un modelo con `/connect`: **OpenCode** (cuenta gratuita en opencode.ai, revisa `/models`), **GitHub Copilot** (tu plan Free, Student o Pro) u **OpenAI** (ChatGPT Plus/Pro).
 5. **Comprueba el permiso** antes de la clase: pídele *"Ejecuta git status"*. **Debe pedirte permiso antes de ejecutarlo.** Si lo ejecuta sin preguntar, el paso 2 no funcionó: no lo uses en clase hasta corregirlo.
 6. **Privacidad:** según OpenCode, durante su periodo gratuito algunos modelos pueden usar lo que les envías para mejorarse. No escribas nada personal ni confidencial.
 7. **`AGENTS.md`:** lo lee directamente.
 
-#### ¿Usas otro agente?
+### 4.3 Si OpenCode no te arranca: Copilot Free (respaldo)
 
-Si ya tienes un agente que no está en esta lista, puedes usarlo **bajo tu propio riesgo**, siempre que cumpla las cuatro condiciones del inicio de esta sección y pase la prueba de abajo. En clase no podremos resolver problemas de instalación de agentes que no estén aquí.
+Copilot Free es la **red de seguridad** del curso, no una alternativa equivalente: viene incluido en VS Code, no necesita instalación aparte y está listo en minutos — pero su cuota (las preguntas frecuentes de GitHub hablan de ~50 solicitudes al mes) **no alcanza para el proyecto final**.
 
-### 4.3 La prueba del agente
+1. Actualiza VS Code. Las funciones de IA ya vienen incluidas.
+2. Pasa el mouse sobre el ícono de Copilot en la barra inferior y elige **Use AI Features**. Inicia sesión **con la misma cuenta de GitHub del curso**.
+3. Abre la vista de **Chat** y elige el modo que puede editar archivos y ejecutar comandos (el **agente**), no el de solo preguntas.
+4. **`AGENTS.md`:** en **Settings** busca `chat.useAgentsMdFile` y confirma que esté activado.
+
+> Si ya tienes el beneficio de estudiante de GitHub (sección 5), tu Copilot Free se convierte en Copilot Student automáticamente, sin que reinstales nada — pero no es requisito del curso.
+
+### 4.4 La prueba del agente
 
 Con el agente abierto **en la carpeta del repo del equipo**, pídele:
 
@@ -325,24 +238,9 @@ Debe responder con los archivos reales. Después, en su configuración, revisa d
 
 ## <font color="#179287">5. Programas para estudiantes</font>
 
-Revisamos qué ofertas para estudiantes existen hoy y si alcanzan a estar listas para la clase del **sábado 17 de octubre de 2026**:
+GitHub Education sigue existiendo y da **Copilot Student**: sugerencias ilimitadas y 200 créditos de IA al mes. Si lo activas, tu Copilot Free (sección 4.3) se convierte en Student automáticamente, sin que reinstales nada. **No es requisito del curso** — con Copilot Free como respaldo alcanza para la sesión.
 
-| Programa | Qué da | ¿Aplica para alumnos de la UADY? | ¿Llega al sábado? |
-|---|---|---|---|
-| **GitHub Copilot Student** (con GitHub Education) | Copilot gratis: sugerencias ilimitadas y 200 créditos de IA al mes. También abre el resto del *Student Developer Pack* | **Sí**, con credencial o constancia vigente | **Posible, no garantizado.** GitHub no publica cuánto tarda la verificación, y después de aprobarla el beneficio *"puede tardar varios días"* en aplicarse. Las inscripciones estuvieron pausadas de abril a junio de 2026 y reabrieron gradualmente desde el 16 de junio. **Pídelo hoy** y usa Copilot Free mientras tanto |
-| **Google AI Plus para estudiantes** | 12 meses gratis de Google AI Plus (fuera de EE. UU.). Se canjea hasta el 31 de diciembre de 2026 | Probablemente: Google lo ofrece en más de 140 países y excluye a EE. UU., Bolivia, Albania, Canadá, Macao, Hong Kong y Túnez | Sí, pero **no cuentes con él para el agente**: la oferta no menciona herramientas de código. Pide una forma de pago y, si no lo cancelas, al año cobra la mensualidad |
-| **ChatGPT Plus para estudiantes** | Meses gratis de Plus | **No:** la única oferta vigente que encontramos es para universitarios de EE. UU. | No |
-| **Claude para estudiantes** | No encontramos descuento individual. El acceso de estudiante llega solo si la universidad tiene un convenio de *Claude for Education* | No, de forma individual | No |
-
-### Cómo solicitar el beneficio de estudiante de GitHub
-
-1. Entra a [github.com/settings/education/benefits](https://github.com/settings/education/benefits) y haz clic en **Start an application**.
-2. Ten a la mano **una prueba de que estás inscrito hoy**: tu credencial con fecha vigente, tu horario, tu kárdex o una constancia de estudios. Si te pide correo académico, agrega y verifica tu correo `@alumnos.uady.mx` en **Settings → Emails** antes de enviar la solicitud.
-3. Envía la solicitud y espera la respuesta por correo.
-4. Ya aprobado, vuelve a la misma página: en *"Free GitHub developer resources for students and teachers"* haz clic en **Learn more** y activa **Copilot Student**.
-5. Si solo te aparecen opciones de pago, **no compres nada**: espera unos días y vuelve a intentarlo. Si sigue igual, escribe al soporte de GitHub Education.
-
-> Requisitos de GitHub: ser estudiante inscrito en un programa que otorgue título, tener tu propia cuenta personal de GitHub y al menos 13 años.
+Si quieres pedirlo: [github.com/settings/education/benefits](https://github.com/settings/education/benefits). GitHub no publica cuánto tarda la verificación; pídelo con días de anticipación si te interesa para los autoestudios o el proyecto final.
 
 ---
 
@@ -356,14 +254,14 @@ La noche anterior, cada quien:
 - [ ] En Windows, VS Code abre una terminal **Git Bash**.
 - [ ] En tu copia del repo del equipo: `git switch main`, `git pull` y `git status` sin nada pendiente.
 - [ ] Tu perfil está en `integrantes/` y tu fila en la tabla del README.
-- [ ] Tu agente respondió la prueba de la sección 4.3 con los archivos reales, y sabes cómo aprueba permisos.
-- [ ] Enviaste la solicitud del beneficio de estudiante de GitHub.
+- [ ] Tu agente (OpenCode, o Copilot Free si es tu respaldo) respondió la prueba de la sección 4.4 con los archivos reales, y sabes cómo aprueba permisos.
+- [ ] (Opcional) Enviaste la solicitud del beneficio de estudiante de GitHub.
 
 Y el equipo:
 
 - [ ] Los once puntos de la sección 3.1 están en verde.
 - [ ] Decidieron los papeles de la sesión: **piloto** (quien tenga el agente más capaz), **revisor**, **probador** y **líder**. En equipos de tres, el líder también es el probador.
-- [ ] Saben quién tiene el agente de respaldo si al piloto se le acaba la cuota.
+- [ ] Saben que Copilot Free (sección 4.3) es el respaldo si a OpenCode se le acaba la cuota del piloto.
 
 ---
 
@@ -375,9 +273,8 @@ Y el equipo:
 | `gh ruleset check main` responde *"Upgrade to GitHub Pro or make this repository public"* | El repo es privado: el líder lo hace público (sección 3.1, punto 1) |
 | No aparece **Git Bash** en la terminal de VS Code | Instala Git for Windows (sección 2) y reinicia VS Code |
 | El agente dice que no encuentra archivos | Lo abriste en otra carpeta: abre en VS Code **la carpeta del repo del equipo** (`File → Open Folder`) |
-| Copilot dice que se acabó tu cuota | Usa el agente de respaldo de tu equipo. La cuota de Copilot Free se renueva cada mes |
-| GitHub Education me pide más documentos | Sube otra prueba con fecha vigente (por ejemplo, el horario del semestre) y vuelve a enviar |
-| Pagué un plan y la extensión sigue diciendo que no tengo acceso | Cierra sesión en la extensión, vuelve a iniciarla con **la misma cuenta** con la que pagaste y reinicia VS Code |
+| OpenCode ejecuta `git status` sin pedir permiso | Revisa `opencode.json` (sección 4.2, paso 2): falta `permission.edit`/`bash` en `"ask"`, o el archivo no quedó en la ruta correcta |
+| Se te acabaron las solicitudes de Copilot Free (tu respaldo) | Espera a que se renueve el mes, o prueba otro modelo gratuito de OpenCode con `/models` |
 | Usas otro editor y algo no coincide | Es bajo tu propio riesgo: cambia a VS Code para la clase |
 
 ---
@@ -386,8 +283,4 @@ Y el equipo:
 
 - GitHub: [planes de Copilot](https://github.com/features/copilot/plans) · [Copilot gratis para estudiantes](https://docs.github.com/copilot/how-tos/manage-your-account/free-access-with-copilot-student) · [solicitar GitHub Education como estudiante](https://docs.github.com/en/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student) · [plan Copilot Student](https://github.blog/changelog/2026-03-13-updates-to-github-copilot-for-students/) · [actualizaciones del plan para estudiantes](https://github.com/orgs/community/discussions/189268) · [reapertura de inscripciones](https://github.com/orgs/community/discussions/197089)
 - VS Code: [configurar Copilot](https://code.visualstudio.com/docs/copilot/setup) · [instrucciones personalizadas y `AGENTS.md`](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
-- Anthropic: [instalar Claude Code](https://code.claude.com/docs/en/setup) · [`AGENTS.md` en Claude Code](https://code.claude.com/docs/en/memory) · [planes y precios](https://claude.com/pricing)
-- OpenAI: [Codex en GitHub](https://github.com/openai/codex) · [precios de Codex](https://learn.chatgpt.com/docs/pricing)
-- Google: [fin del plan gratuito de Gemini Code Assist y Gemini CLI](https://developers.google.com/gemini-code-assist/docs/deprecations/code-assist-individuals) · [Antigravity: primeros pasos](https://antigravity.google/docs/getting-started/) · [oferta para estudiantes](https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/)
-- Kilo Code: [extensión para VS Code](https://kilo.ai/docs/code-with-ai/platforms/vscode) · [usar Kilo gratis](https://github.com/Kilo-Org/kilocode/blob/main/packages/kilo-docs/pages/getting-started/using-kilo-for-free.md)
 - OpenCode: [instalación](https://opencode.ai/docs/) · [permisos](https://opencode.ai/docs/permissions/) · [configuración](https://opencode.ai/docs/config/) · [`AGENTS.md`](https://opencode.ai/docs/rules/) · [VS Code](https://opencode.ai/docs/ide/) · [proveedores](https://opencode.ai/docs/providers/) · [modelos y privacidad](https://opencode.ai/docs/zen/)

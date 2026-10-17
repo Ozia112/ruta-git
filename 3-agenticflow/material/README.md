@@ -18,7 +18,7 @@ Etapa 3 del curso de Git · AgenticFlow · Todo lo que necesitas durante la sesi
 
 | Qué | Para qué | Cuándo |
 |---|---|---|
-| [Requisitos previos](requisitos.md) | Lo que necesitas listo y configurado: VS Code, Git y GitHub CLI, el repo del equipo de GitFlow completo, un agente (opciones gratuitas, económicas y estándar) y los programas para estudiantes | Antes de la clase, con días de anticipación |
+| [Requisitos previos](requisitos.md) | Lo que necesitas listo y configurado: VS Code, Git y GitHub CLI, el repo del equipo de GitFlow completo, OpenCode (con Copilot Free como respaldo) y los programas para estudiantes | Antes de la clase, con días de anticipación |
 | [Guía del alumno](guia-alumno.md) | Los 5 bloques de la sesión, con el ciclo completo una vez: documentar, tres revisiones, probar y desplegar | Durante la clase |
 | [Plantillas y comprobaciones](plantillas/) | Los documentos que tu equipo copia y adapta: `AGENTS.md`, especificación, guía de revisión, plantilla de PR, ADR, riesgos, despliegue, el robot y los scripts | Bloques 2 y 3, autoestudios y proyecto final |
 | [Autoestudio 4](autoestudio-4.md) | Decisiones que el agente no vuelve a discutir, auditoría de afirmaciones y el registro de riesgos del equipo | Después de la clase |
