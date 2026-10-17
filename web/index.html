@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruta Git</title>
+  <meta name="description" content="Curso de Git y GitHub en tres etapas: primero con botones, después en equipo desde la terminal y, al final, trabajando junto con agentes.">
+  <style>
+    :root {
+      --accent: #179287;
+      --accent-soft: #e3f3f1;
+      --bg: #fbfcfc;
+      --surface: #ffffff;
+      --text: #1d2524;
+      --muted: #5a6866;
+      --border: #dfe6e5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --accent: #3cc2b4;
+        --accent-soft: #15302d;
+        --bg: #111716;
+        --surface: #182120;
+        --text: #e6eeed;
+        --muted: #9db0ad;
+        --border: #2a3836;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px 64px;
+    }
+
+    a { color: var(--accent); }
+
+    code {
+      font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--accent-soft);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+
+    /* Encabezado */
+    header {
+      text-align: center;
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+    .logos img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      line-height: 1.2;
+    }
+    .lead {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .institution {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .institution img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+
+    /* Secciones */
+    section { padding-top: 48px; }
+    h2 {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 1.5rem;
+    }
+    .section-intro {
+      margin: 0 0 24px;
+      color: var(--muted);
+    }
+
+    /* Etapas */
+    .stages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .stage {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .stage-number {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .stage h3 {
+      margin: 4px 0 8px;
+      font-size: 1.3rem;
+    }
+    .stage p { margin: 0 0 16px; }
+    .stage dl {
+      margin: 0 0 20px;
+      font-size: 0.95rem;
+    }
+    .stage dt {
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .stage dd { margin: 0 0 10px; }
+    .stage .start {
+      margin-top: auto;
+      align-self: flex-start;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .stage .start:hover,
+    .stage .start:focus-visible { filter: brightness(1.1); }
+    @media (prefers-color-scheme: dark) {
+      .stage .start { color: #0b1514; }
+    }
+
+    .note {
+      margin: 24px 0 0;
+      padding: 16px 20px;
+      background: var(--accent-soft);
+      border-radius: 10px;
+    }
+    .note p { margin: 0 0 8px; }
+    .note p:last-child { margin: 0; }
+
+    /* Tablas */
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: var(--accent-soft);
+      font-size: 0.9rem;
+    }
+    tr:last-child td { border-bottom: 0; }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="logos">
+        <img src="../assets/logos/git.webp" alt="Git">
+        <img src="../assets/logos/github.png" alt="GitHub">
+      </div>
+      <h1>Ruta Git: de los botones a los agentes</h1>
+      <p class="lead">Curso de Git y GitHub en tres etapas: primero con botones, después en equipo desde la terminal y, al final, trabajando junto con agentes.</p>
+      <div class="institution">
+        <img src="../assets/logos/uady.webp" alt="UADY">
+        <span>Facultad de Matemáticas de la UADY · Vinculación FMAT</span>
+      </div>
+    </header>
+
+    <section aria-labelledby="etapas">
+      <h2 id="etapas">Las etapas del curso</h2>
+      <p class="section-intro">Cada etapa se apoya en la anterior. Empieza por la primera que no hayas tomado.</p>
+
+      <ol class="stages">
+        <li class="stage">
+          <span class="stage-number">Etapa 1</span>
+          <h3>GitBasic</h3>
+          <p>Qué es Git, tu primer repo, ramas, push y pull, tu primer Pull Request y tu primer conflicto.</p>
+          <dl>
+            <dt>Herramienta principal</dt>
+            <dd>GitHub Desktop</dd>
+            <dt>Duración</dt>
+            <dd>1 sesión de 4 h</dd>
+          </dl>
+          <a class="start" href="https://github.com/Ozia112/ruta-git/tree/main/1-gitbasic">Empieza aquí</a>
+        </li>
+        <li class="stage">
+          <span class="stage-number">Etapa 2</span>
+          <h3>GitFlow</h3>
+          <p>Lo mismo, ahora en la terminal y en equipo: issues, Pull Requests revisados, reglas del repo, historia limpia y conflictos.</p>
+          <dl>
+            <dt>Herramienta principal</dt>
+            <dd>Terminal (<code>git</code> y <code>gh</code>)</dd>
+            <dt>Duración</dt>
+            <dd>~11 h y media de clase + 2 autoestudios y una tarea</dd>
+          </dl>
+          <a class="start" href="https://github.com/Ozia112/ruta-git/tree/main/2-gitflow">Empieza aquí</a>
+        </li>
+        <li class="stage">
+          <span class="stage-number">Etapa 3</span>
+          <h3>AgenticFlow</h3>
+          <p>Construir software de calidad con un agente: documentar, revisar, implementar, revisar, probar, revisar y desplegar, con GitFlow poniendo orden.</p>
+          <dl>
+            <dt>Herramienta principal</dt>
+            <dd>El agente de código que tengas + <code>AGENTS.md</code></dd>
+            <dt>Duración</dt>
+            <dd>1 sesión de 4 h + 2 autoestudios y un proyecto final desplegado</dd>
+          </dl>
+          <a class="start" href="https://github.com/Ozia112/ruta-git/tree/main/3-agenticflow">Empieza aquí</a>
+        </li>
+      </ol>
+
+      <div class="note">
+        <p>Entre una etapa y la siguiente hay un <strong>autoestudio</strong> para practicar por tu cuenta. El primero, al final de GitBasic, te asoma a la terminal antes de llegar a GitFlow. En GitFlow, el 2 practica con comandos los botones que faltaban y el 3 repite en equipo el ciclo completo sin guía. En AgenticFlow, los autoestudios 4 y 5 continúan lo que empieza en la sesión.</p>
+        <p>Al terminar AgenticFlow, cada equipo presenta su proyecto <strong>construido y desplegado</strong> a un grupo de ingenieros egresados y con experiencia en el sector, que les dan mentoría, consejos y respuestas a sus dudas. Esa etapa está en diseño.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="organizacion">
+      <h2 id="organizacion">Cómo está organizada cada etapa</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Dónde</th><th>Qué hay</th><th>Para quién</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>README.md</code></td><td>De qué trata la etapa, qué instalar antes y por dónde empezar</td><td>Alumnos</td></tr>
+            <tr><td><code>material/</code></td><td>Guía del alumno, autoestudios, tareas, plantillas y lecturas</td><td>Alumnos</td></tr>
+            <tr><td><code>guion/</code></td><td>Guion del instructor, planeación y guía de diapositivas</td><td>Instructores</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-intro" style="margin-top: 16px;">Para quien diseña o imparte el curso, <a href="https://github.com/Ozia112/ruta-git/tree/main/docs"><code>docs/</code></a> tiene la <a href="https://github.com/Ozia112/ruta-git/blob/main/docs/matriz-de-contenido.md">matriz de contenido</a>: qué tema vive en qué etapa y qué se repasa entre etapas.</p>
+    </section>
+
+    <section aria-labelledby="vocabulario">
+      <h2 id="vocabulario">Vocabulario del curso</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Término</th><th>Qué es</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Etapa</strong></td><td>Una parte del curso con su propio tema: GitBasic, GitFlow y AgenticFlow</td></tr>
+            <tr><td><strong>Sesión</strong></td><td>Una clase. Una etapa puede ocupar varias sesiones</td></tr>
+            <tr><td><strong>Bloque</strong></td><td>Cada parte de una etapa donde se explica y practica un concepto principal</td></tr>
+            <tr><td><strong>Guía del alumno</strong></td><td>Lo que sigues durante la clase, bloque por bloque</td></tr>
+            <tr><td><strong>Autoestudio</strong></td><td>Práctica por tu cuenta, fuera de clase</td></tr>
+            <tr><td><strong>Guion</strong></td><td>El material guía del instructor</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      Ruta Git · <a href="https://github.com/Ozia112/ruta-git">Repositorio en GitHub</a>
+    </footer>
+  </main>
+</body>
+</html>
